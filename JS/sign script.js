@@ -21,11 +21,11 @@ if (localStorage.theme == "light") {
 function pic_theme() {
     if (!document.body.classList.contains("dark")) {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo-2.svg" // light logo
+            logo.src = "images/logo/logo-alt.png" // light logo
         })
     } else {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo.svg" // dark logo
+            logo.src = "images/logo/logo.png" // dark logo
         })
     }
 }

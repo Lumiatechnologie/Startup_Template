@@ -40,7 +40,7 @@
 }
 
 header nav a {
-    @apply hover:text-icons-color hover:dark:text-white duration-100 max-[992px]:py-3
+    @apply hover:text-icons-color hover:dark:text-white duration-100 max-[992px]:py-3 text-[20px]
 }
 
 header a.active {
@@ -237,13 +237,13 @@ section {
 }
 
 
-#support .title{
+#contact .title{
     @apply text-left m-0
 }
 
-#support .ticket .name,
-#support .ticket .email,
-#support .ticket .message{
+#contact .ticket .name,
+#contact .ticket .email,
+#contact .ticket .message{
     @apply relative w-full
 }
 
@@ -252,11 +252,11 @@ label{
 }
 
 input,
-#support .ticket textarea{
+#contact .ticket textarea{
     @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-icons-color
 }
 
-#support .subscribe input:not(:last-of-type){
+#contact .subscribe input:not(:last-of-type){
     @apply mb-4
 }
 

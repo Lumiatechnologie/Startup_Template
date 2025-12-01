@@ -41,7 +41,7 @@
 }
 
 header nav a {
-    @apply hover:text-icons-color hover:dark:text-color-gold duration-100 max-[992px]:py-3 text-[18px]
+    @apply hover:text-icons-color hover:dark:text-color-gold duration-100 max-[992px]:py-3 lg:text-[17px]
 }
 
 header a.active {

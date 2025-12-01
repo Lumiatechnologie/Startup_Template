@@ -111,34 +111,34 @@ function HeaderEffect() {
 window.addEventListener('scroll', HeaderEffect)
 
 // close video modal
-close_video.forEach(ele => {
-    ele.addEventListener("click", () => {
-        embed_video.classList.remove("opacity-100")
-        overlay.classList.remove("opacity-100")
-        embed_video.classList.add("opacity-0")
-        overlay.classList.add("opacity-0")
-        setTimeout(() => {
-            embed_video.classList.remove("flex")
-            embed_video.classList.add("hidden")
-            overlay.classList.add("hidden")
-            iframe.setAttribute('src', "https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M");
-        }, 120);
-    })
-});
+// close_video.forEach(ele => {
+//     ele.addEventListener("click", () => {
+//         embed_video.classList.remove("opacity-100")
+//         overlay.classList.remove("opacity-100")
+//         embed_video.classList.add("opacity-0")
+//         overlay.classList.add("opacity-0")
+//         setTimeout(() => {
+//             embed_video.classList.remove("flex")
+//             embed_video.classList.add("hidden")
+//             overlay.classList.add("hidden")
+//             iframe.setAttribute('src', "https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M");
+//         }, 120);
+//     })
+// });
 
-// open video modal and autoplay
-play_btn.addEventListener("click", () => {
-    embed_video.classList.remove("hidden")
-    embed_video.classList.add("flex")
-    overlay.classList.remove("hidden")
-    setTimeout(() => {
-        embed_video.classList.remove("opacity-0")
-        overlay.classList.remove("opacity-0")
-        embed_video.classList.add("opacity-100")
-        overlay.classList.add("opacity-100")
-        iframe.setAttribute('src', "https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M&autoplay=1&cc_load_policy=1&controls=1&disablekb=0&enablejsapi=0&fs=1&iv_load_policy=1&loop=0&rel=0&showinfo=1&start=0&wmode=transparent&theme=dark");
-    }, 120);
-})
+// // open video modal and autoplay
+// play_btn.addEventListener("click", () => {
+//     embed_video.classList.remove("hidden")
+//     embed_video.classList.add("flex")
+//     overlay.classList.remove("hidden")
+//     setTimeout(() => {
+//         embed_video.classList.remove("opacity-0")
+//         overlay.classList.remove("opacity-0")
+//         embed_video.classList.add("opacity-100")
+//         overlay.classList.add("opacity-100")
+//         iframe.setAttribute('src', "https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M&autoplay=1&cc_load_policy=1&controls=1&disablekb=0&enablejsapi=0&fs=1&iv_load_policy=1&loop=0&rel=0&showinfo=1&start=0&wmode=transparent&theme=dark");
+//     }, 120);
+// })
 
 // toggle subscription type and update prices
 radio.addEventListener("click", () => {

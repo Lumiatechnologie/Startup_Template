@@ -24,9 +24,13 @@ let price_period = document.querySelectorAll(".subs .price span") // price perio
 if (localStorage.theme == "light") {
     document.body.classList.remove("dark")
     pic_theme()
+    theme_btn.classList.remove("fi-rc-moon")
+    theme_btn.classList.add("fi-rs-brightness")
 } else {
     document.body.classList.add("dark")
     pic_theme()
+    theme_btn.classList.add("fi-rc-moon")
+    theme_btn.classList.remove("fi-rs-brightness")
 }
 
 // Update images based on theme

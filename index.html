@@ -10,10 +10,10 @@
 </head>
 <body class="relative dark:bg-dark-main-color bg-gray-100 text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-8 py-3 px-3 rounded-md bg-icons-color text-white duration-120 hover:contrast-150">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-8 py-3 px-3 rounded-md bg-color-gold text-white duration-120 hover:contrast-150">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
-    <div class="dark:bg-dark-secondary-color">
+    <div id="header" class="dark:bg-dark-secondary-color">
         <header class="fixed w-full top-0 left-0 duration-80 z-9999">
         <div class="container py-6 flex items-center justify-between duration-80 text-[16px]">
             <a href="index.html" aria-label="Home" class="w-30 sm:w-40 tb:w-45">
@@ -23,8 +23,8 @@
                 <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-18 max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
                     <a class="active" href="#home">Accueil</a>
                     <a href="#about">Á propos de nous</a>
-                    <a href="#portfolio">Portfolio</a>
                     <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
                     <a href="#contact">Contact</a>
                     <!-- <div class="sign md:hidden flex items-center w-full justify-between mt-5">
                         <a href="sign-in.html" class="text-nowrap bg-gray-500">Sign In</a>
@@ -35,7 +35,7 @@
                     <a href="sign-in.html" class="text-nowrap">Sign In</a>
                     <a href="sign-up.html" class="text-nowrap bg-icons-color text-white py-3 px-8 md:px-9 lg:px-6 font-medium rounded-[3px] hover:contrast-125 duration-125">Sign Up</a>
                 </div> -->
-                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px]"></i>
+                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px] hover:text-icons-color hover:dark:text-color-gold"></i>
                 <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger ml-8 min-[992px]:hidden"></i>
             </div>
             
@@ -44,61 +44,20 @@
         <div class="max-md:opacity-30 absolute top-0 right-0 max-[376px]:w-[440px]">
             <img class="w-full" src="images/hero/shape-01.svg" alt=""> 
         </div>
-        <section id="home" class="relative max-[575px]:!pt-[110px]">
+        <main id="home" class="relative max-[575px]:!pt-[110px]">
             <img class="max-md:opacity-30 absolute bottom-0 left-0" src="images/hero/shape-02.svg" alt="">
             <div class="container flex-center flex-col xl:pt-[180px] xl:pb-[160px] md:pt-[80px] md:pb-[120px] pb-16 pt-[60px] w-full h-[525px]">
                 <div class="max-w-[800px] text-center mb-15">
-                    <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-5xl font-bold !leading-tight">Free and Open-Source Next.js Template for Startup & SaaS</h2>
-                    <p class="dark:text-text-color sm:text-lg md:text-xl leading-relaxed">Startup is free Next.js template for startups and SaaS business websites comes with all the essential pages, components, and sections you need to launch a complete business website, built-with Next 13.x and Tailwind CSS.</p>
+                    <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
+                    <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
                 </div>
                 <div class="flex-center sm:space-x-5 max-sm:space-y-5 max-sm:flex-col">
-                    <a href="" class="px-11 py-4 rounded-sm font-bold text-white bg-icons-color">Get Pro</a>
-                    <a href="" class="px-8 py-4 rounded-sm font-bold text-white bg-black dark:bg-[#ffffff1a]">Star on Github</a>
+                    <a href="" class="px-8 py-4 rounded-sm font-bold text-white bg-color-gold">Contactez-nous</a>
                 </div>
             </div>
-        </section>
+        </main>
     </div>
-    <section>
-        <div class="container">
-            <div class="title">
-                <h2>Main Features</h2>
-                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="features grid gap-y-14 gap-x-8 grid-cols-1 md:grid-cols-2 tb:grid-cols-3 grid-rows-2">
-                <div class="box">
-                    <div class="icon"><ion-icon name="grid"></ion-icon></div>
-                    <h3>Crafted for Startups</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-                <div class="box">
-                    <div class="icon"><ion-icon name="layers"></ion-icon></div>
-                    <h3>High-quality Design</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-                <div class="box">
-                    <div class="icon"><ion-icon name="apps"></ion-icon></div>
-                    <h3>Next.js 13 (Latest)</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-                <div class="box">
-                    <div class="icon"><ion-icon name="settings-sharp"></ion-icon></div>
-                    <h3>Tailwind CSS</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-                <div class="box">
-                    <div class="icon"><ion-icon name="copy"></ion-icon></div>
-                    <h3>Fully Customizable</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-                <div class="box">
-                    <div class="icon"><ion-icon name="qr-code"></ion-icon></div>
-                    <h3>Free and Open-Source</h3>
-                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="relative overflow-hidden">
+    <!-- <section class="relative overflow-hidden">
         <div class="absolute -z-1 bottom-0 left-0 h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
         <div class="container">
             <div class="title">
@@ -117,7 +76,7 @@
                 
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="about">
         <div class="container">
             <div class="flex justify-between items-center max-tb:flex-col gap-14 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
@@ -186,6 +145,46 @@
                         <h2>Next.js</h2>
                         <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt consectetur adipiscing elit setim.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <div class="title">
+                <h2>Services</h2>
+                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+            </div>
+            <div class="features grid gap-y-14 gap-x-8 grid-cols-1 md:grid-cols-2 tb:grid-cols-3 grid-rows-2">
+                <div class="box">
+                    <div class="icon"><ion-icon name="grid"></ion-icon></div>
+                    <h3>Crafted for Startups</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="layers"></ion-icon></div>
+                    <h3>High-quality Design</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="apps"></ion-icon></div>
+                    <h3>Next.js 13 (Latest)</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="settings-sharp"></ion-icon></div>
+                    <h3>Tailwind CSS</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="copy"></ion-icon></div>
+                    <h3>Fully Customizable</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="qr-code"></ion-icon></div>
+                    <h3>Free and Open-Source</h3>
+                    <p>Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.</p>
                 </div>
             </div>
         </div>

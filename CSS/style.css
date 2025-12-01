@@ -23,8 +23,9 @@
     --color-overlay: rgba(10, 14, 29, 0.7);
     --color-icons-color: #4b6cf7;
     --color-icons-bg-color: rgba(74, 109, 247, 0.2);
-    --color-text-color: #959cb1;
-    --color-text-2color: #788293;
+    --color-color: #788293;
+    --color-color-alt: #959cb1;
+    --color-color-gold: #EFBF04;
     --color-dark-box: #1d232f;
     --color-dark-login: #2c303b;
     --breakpoint-tb: 62rem;
@@ -40,18 +41,18 @@
 }
 
 header nav a {
-    @apply hover:text-icons-color hover:dark:text-white duration-100 max-[992px]:py-3 text-[20px]
+    @apply hover:text-icons-color hover:dark:text-color-gold duration-100 max-[992px]:py-3 text-[18px]
 }
 
 header a.active {
-    @apply text-icons-color dark:text-white duration-100
+    @apply text-icons-color dark:text-color-gold font-semibold duration-100
 }
 
 header nav .sign a{
     @apply text-white text-center w-[97px] font-medium rounded-[3px] hover:contrast-125 duration-125
 }
 
-section {
+section, main {
     @apply py-16 md:py-20 tb:py-28 duration-125
 }
 
@@ -64,7 +65,7 @@ section {
 }
 
 .title p {
-    @apply text-text-2color !leading-relaxed md:text-lg
+    @apply text-color !leading-relaxed md:text-lg
 }
 
 .box {
@@ -88,7 +89,7 @@ section {
 }
 
 .box p {
-    @apply text-text-2color mt-5 leading-relaxed pr-[10px]
+    @apply text-color mt-5 leading-relaxed pr-[10px]
 }
 
 .checklist li {
@@ -165,7 +166,7 @@ section {
 }
 
 .subs .box .type .price span {
-    @apply font-medium text-lg text-text-2color translate-y-[3.5px]
+    @apply font-medium text-lg text-color translate-y-[3.5px]
 }
 
 .subs .box .type .sub {
@@ -193,7 +194,7 @@ section {
 }
 
 .subs .box ul li span {
-    @apply text-text-2color
+    @apply text-color
 }
 
 .blog .box {
@@ -233,7 +234,7 @@ section {
 }
 
 .blog .box .profile span{
-    @apply text-text-2color text-[12px]
+    @apply text-color text-[12px]
 }
 
 
@@ -261,7 +262,7 @@ input,
 }
 
 footer{
-    @apply text-text-color
+    @apply text-color-alt
 }
 
 footer .logo,
@@ -300,7 +301,7 @@ footer .credits div{
 
 .sign .alt-log a,
 .sign a.submit{
-    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-text-color hover:text-icons-color dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-icons-color
+    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-color-alt hover:text-icons-color dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-icons-color
 }
 
 .sign .alt-log span.h-line{

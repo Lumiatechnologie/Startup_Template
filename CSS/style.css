@@ -21,11 +21,12 @@
     --color-dark-secondary-color: #181c28;
     --color-header-overlay: rgba(63, 62, 62, 0.336);
     --color-overlay: rgba(10, 14, 29, 0.7);
-    --color-icons-color: #4b6cf7;
-    --color-icons-bg-color: rgba(74, 109, 247, 0.2);
-    --color-color: #788293;
-    --color-color-alt: #959cb1;
-    --color-color-gold: #EFBF04;
+    --color-main-blue: #4b6cf7;
+    --color-blue-bg-color: rgba(74, 109, 247, 0.2);
+    --color-main-gold: #EFBF04;
+    --color-gold-bg-color: rgba(239, 191, 4, 0.2);
+    --color-main-text: #788293;
+    --color-main-text-alt: #959cb1;
     --color-dark-box: #1d232f;
     --color-dark-login: #2c303b;
     --breakpoint-tb: 62rem;
@@ -41,11 +42,11 @@
 }
 
 header nav a {
-    @apply hover:text-icons-color hover:dark:text-color-gold duration-100 max-[992px]:py-3 lg:text-[17px]
+    @apply hover:text-main-blue hover:dark:text-main-gold duration-100 max-[992px]:py-3 lg:text-[17px]
 }
 
 header a.active {
-    @apply text-icons-color dark:text-color-gold font-semibold duration-100
+    @apply text-main-blue dark:text-main-gold font-semibold duration-100
 }
 
 header nav .sign a{
@@ -65,55 +66,82 @@ section, main {
 }
 
 .title p {
-    @apply text-color !leading-relaxed md:text-lg
+    @apply text-main-text !leading-relaxed md:text-lg
 }
 
 .box {
     @apply dark:bg-dark-box
 }
 
-.features .box {
+.services .box {
     @apply w-full bg-transparent
 }
 
-.features .box .icon {
-    @apply flex-center text-icons-color text-5xl rounded-[6px] bg-icons-bg-color w-[70px] h-[70px] py-[12px] px-[10px]
+.services .box .icon {
+    @apply flex-center text-main-blue dark:text-main-gold bg-blue-bg-color dark:bg-gold-bg-color text-5xl rounded-[6px] w-[70px] h-[70px] py-[12px] px-[10px]
 }
 
-.features .box ion-icon {
+.services .box ion-icon {
     @apply text-[43px]
 }
 
-.features .box h3 {
+.services .box h3 {
     @apply my-3 font-bold text-2xl mt-10 dark:text-white
 }
 
 .box p {
-    @apply text-color mt-5 leading-relaxed pr-[10px]
+    @apply text-main-text mt-5 leading-relaxed pr-[10px]
 }
 
-.checklist li {
+#about .part-1 .checklist li {
     @apply flex items-center space-x-4
 }
 
-.checklist li>div {
-    @apply flex-center rounded-md text-icons-color bg-icons-bg-color size-[30px]
+#about .part-1 .checklist li>div {
+    @apply flex-center rounded-md text-main-blue dark:text-main-gold bg-blue-bg-color dark:bg-gold-bg-color size-[30px]
 }
 
-.checklist li ion-icon {
+#about .part-1 .checklist li ion-icon {
     @apply translate-y-[-1px] text-[22px]
 }
 
-.text-2 .title {
-    @apply mb-10 text-left
+#about .part-2 fieldset {
+    @apply border-none p-0 mb-4
 }
 
-.text-2 .title h2 {
-    @apply text-xl sm:text-2xl lg:text-xl xl:text-2xl
+#about .part-2 fieldset p {
+    @apply max-h-0 overflow-hidden duration-300
 }
 
-.text-2 .title p {
-    @apply text-base sm:text-lg font-medium leading-relaxed
+#about .part-2 fieldset p {
+    @apply text-base sm:text-lg font-medium leading-relaxed ml-[37px]
+}
+
+#about .part-2 fieldset.open p {
+    @apply max-h-[500px] mb-4
+}
+
+#about .part-2 fieldset legend {
+    @apply cursor-pointer font-bold dark:text-white m-0 text-left flex gap-x-3
+}
+
+#about .part-2 fieldset legend ion-icon{
+    @apply text-3xl translate-y-[15px] duration-300 
+}
+
+#about .part-2 fieldset.open legend ion-icon{
+    @apply rotate-90
+}
+
+#about .part-2 fieldset legend h2 {
+    @apply text-xl sm:text-2xl lg:text-xl xl:text-2xl duration-250
+}
+
+#about .part-2 fieldset:hover legend ion-icon,
+#about .part-2 fieldset:hover legend h2,
+#about .part-2 fieldset.active legend ion-icon,
+#about .part-2 fieldset.active legend h2{
+    @apply  text-main-blue dark:text-main-gold duration-250
 }
 
 .users .box {
@@ -145,7 +173,7 @@ section, main {
 }
 
 .sub-type span.active {
-    @apply text-icons-color
+    @apply text-main-blue
 }
 
 .subs .box {
@@ -166,7 +194,7 @@ section, main {
 }
 
 .subs .box .type .price span {
-    @apply font-medium text-lg text-color translate-y-[3.5px]
+    @apply font-medium text-lg text-main-text translate-y-[3.5px]
 }
 
 .subs .box .type .sub {
@@ -178,7 +206,7 @@ section, main {
 }
 
 .subs .box .btn {
-    @apply bg-icons-color text-white text-center py-3 duration-150 hover:contrast-125 cursor-pointer mb-8 rounded-sm font-semibold text-base
+    @apply bg-main-blue text-white text-center py-3 duration-150 hover:contrast-125 cursor-pointer mb-8 rounded-sm font-semibold text-base
 }
 
 .subs .box ul {
@@ -190,11 +218,11 @@ section, main {
 }
 
 .subs .box ul li ion-icon {
-    @apply text-icons-color bg-icons-bg-color rounded-full text-[13px] p-0.5
+    @apply text-main-blue bg-blue-bg-color rounded-full text-[13px] p-0.5
 }
 
 .subs .box ul li span {
-    @apply text-color
+    @apply text-main-text
 }
 
 .blog .box {
@@ -210,11 +238,11 @@ section, main {
 }
 
 .blog .box .pic span {
-    @apply absolute top-0 right-0 translate-x-[-23px] translate-y-[23px] font-bold text-white text-sm bg-icons-color rounded-[50px] px-4 py-2
+    @apply absolute top-0 right-0 translate-x-[-23px] translate-y-[23px] font-bold text-white text-sm bg-main-blue rounded-[50px] px-4 py-2
 }
 
 .blog .box h4{
-    @apply duration-100 hover:text-icons-color dark:text-white w-fit font-bold text-xl sm:text-2xl cursor-pointer
+    @apply duration-100 hover:text-main-blue dark:text-white w-fit font-bold text-xl sm:text-2xl cursor-pointer
 }
 
 .blog .box p{
@@ -234,7 +262,7 @@ section, main {
 }
 
 .blog .box .profile span{
-    @apply text-color text-[12px]
+    @apply text-main-text text-[12px]
 }
 
 
@@ -254,7 +282,7 @@ label{
 
 input,
 #contact .ticket textarea{
-    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-icons-color
+    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-main-blue
 }
 
 #contact .subscribe input:not(:last-of-type){
@@ -262,7 +290,7 @@ input,
 }
 
 footer{
-    @apply text-color-alt
+    @apply text-main-text-alt
 }
 
 footer .logo,
@@ -275,7 +303,7 @@ footer h4{
 }
 
 footer a{
-    @apply block duration-125 hover:text-icons-color
+    @apply block duration-125 hover:text-main-blue
 }
 
 footer a:not(:last-of-type){
@@ -284,7 +312,7 @@ footer a:not(:last-of-type){
 
 footer .social ion-icon,
 footer .social i{
-    @apply text-[20px] hover:text-icons-color cursor-pointer duration-125
+    @apply text-[20px] hover:text-main-blue cursor-pointer duration-125
 }
 
 footer .links{
@@ -292,7 +320,7 @@ footer .links{
 }
 
 footer .credits a{
-    @apply m-0 font-bold text-black dark:text-white hover:text-icons-color
+    @apply m-0 font-bold text-black dark:text-white hover:text-main-blue
 }
 
 footer .credits div{
@@ -301,7 +329,7 @@ footer .credits div{
 
 .sign .alt-log a,
 .sign a.submit{
-    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-color-alt hover:text-icons-color dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-icons-color
+    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-main-text-alt hover:text-main-blue dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-main-blue
 }
 
 .sign .alt-log span.h-line{
@@ -312,7 +340,7 @@ footer .credits div{
 }
 
 .sign .check a{
-    @apply text-icons-color
+    @apply text-main-blue
 }
 
 .container {

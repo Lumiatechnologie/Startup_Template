@@ -11,6 +11,8 @@ let header = document.querySelector("header") // page header
 let header_container = document.querySelector("header div") // header inner container
 let nav_ele = document.querySelectorAll("nav a") // nav links
 let up_btn = document.querySelector(".to-up") // scroll to top button
+let fieldsets = document.querySelectorAll('#about fieldset')
+let legends = document.querySelectorAll('#about legend')
 let close_video = document.querySelectorAll(".close-video") // video close buttons
 let embed_video = document.querySelector(".embed") // video embed container
 let iframe = document.querySelector("iframe") // video iframe
@@ -145,6 +147,25 @@ window.addEventListener('scroll', HeaderEffect)
 //         iframe.setAttribute('src', "https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M&autoplay=1&cc_load_policy=1&controls=1&disablekb=0&enablejsapi=0&fs=1&iv_load_policy=1&loop=0&rel=0&showinfo=1&start=0&wmode=transparent&theme=dark");
 //     }, 120);
 // })
+
+// Toggle accordion for about section Q&A
+legends.forEach(legend => {
+    // Add click event listener to each legend element
+    legend.addEventListener('click', () => {
+        // Find the closest fieldset parent and toggle the 'open' class
+        const fieldset = legend.closest('fieldset');
+        fieldset.classList.toggle('open');
+        fieldset.classList.toggle('active');
+
+        // Close other fieldsets when one opens with height animation
+        fieldsets.forEach(fs => {
+            if (fs !== fieldset) {
+                fs.classList.remove('open');
+                fs.classList.remove('active');
+            }
+        });
+    });
+});
 
 // toggle subscription type and update prices
 radio.addEventListener("click", () => {

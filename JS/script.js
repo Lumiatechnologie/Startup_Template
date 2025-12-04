@@ -45,16 +45,16 @@ function pic_theme() {
         })
         about_img_1.src = "images/about/about-image.svg"
         about_img_2.src = "images/about/about-image-2.svg"
-        hero_1.src = "images/hero/shape-1.svg"
-        hero_2.src = "images/hero/shape-2.svg"
+        // hero_1.src = "images/hero/shape-1.svg"
+        // hero_2.src = "images/hero/shape-2.svg"
     } else {
         logo.forEach(logo => {
             logo.src = "images/logo/logo.png"
         })
         about_img_1.src = "images/about/about-image-dark.svg"
         about_img_2.src = "images/about/about-image-2-dark.svg"
-        hero_1.src = "images/hero/shape-1-dark.svg"
-        hero_2.src = "images/hero/shape-2-dark.svg"
+        // hero_1.src = "images/hero/shape-1-dark.svg"
+        // hero_2.src = "images/hero/shape-2-dark.svg"
     }
 }
 

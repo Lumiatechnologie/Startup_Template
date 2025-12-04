@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>LUMIATECH</title>
 </head>
-<body class="relative dark:bg-dark-main-color bg-gray-100 text-black dark:text-[#ffffffb3] dark duration-150">
+<body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md bg-main-blue dark:bg-main-gold text-white duration-120 hover:contrast-150">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md bg-main-color dark:bg-main-color text-white duration-120 hover:contrast-150">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
-    <div class="dark:bg-dark-secondary-color">
+    <div class="dark:bg-dark-alt-color">
         <header class="fixed w-full top-0 left-0 duration-80 z-9999">
         <div class="container py-6 flex items-center justify-between duration-80 text-[16px]">
             <a href="index.html" aria-label="Home" class="w-30 sm:w-40 lg:w-43">
@@ -28,53 +28,33 @@
                     <a href="#contact">Contact</a>
                     <!-- <div class="sign md:hidden flex items-center w-full justify-between mt-5">
                         <a href="sign-in.html" class="text-nowrap bg-gray-500">Sign In</a>
-                        <a href="sign-up.html" class="text-nowrap bg-main-blue">Sign Up</a>
+                        <a href="sign-up.html" class="text-nowrap bg-main-color">Sign Up</a>
                     </div> -->
                 </nav>
                 <!-- <div class="sign hidden md:flex items-center space-x-7 text-black dark:text-white mr-5">
                     <a href="sign-in.html" class="text-nowrap">Sign In</a>
-                    <a href="sign-up.html" class="text-nowrap bg-main-blue text-white py-3 px-8 md:px-9 lg:px-6 font-medium rounded-[3px] hover:contrast-125 duration-125">Sign Up</a>
+                    <a href="sign-up.html" class="text-nowrap bg-main-color text-white py-3 px-8 md:px-9 lg:px-6 font-medium rounded-[3px] hover:contrast-125 duration-125">Sign Up</a>
                 </div> -->
-                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px] hover:text-main-blue hover:dark:text-main-gold"></i>
+                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px] hover:text-main-color hover:dark:text-main-color"></i>
                 <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
             </div>
             
         </div>
         </header>
         <div class="max-md:opacity-30 absolute top-0 right-0 max-[376px]:w-[440px]">
-            <img class="w-full hero-1" src="images/hero/shape-1.svg" alt=""> 
+            <img class="w-full hero-1" src="images/hero/shape-1-dark.svg" alt=""> 
         </div>
         <main id="home" class="relative h-[100vh] max-[575px]:!pt-[110px]">
-            <img class="max-md:opacity-30 absolute bottom-0 left-0 hero-2" src="images/hero/shape-2.svg" alt="">
+            <img class="max-md:opacity-30 absolute bottom-0 left-0 hero-2" src="images/hero/shape-2-dark.svg" alt="">
             <div class="container flex-center flex-col xl:pt-[180px] xl:pb-[160px] md:pt-[80px] md:pb-[120px] pb-16 pt-[60px] w-full h-[525px]">
                 <div class="max-w-[800px] text-center mb-15">
                     <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
                     <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
                 </div>
-                <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white bg-main-blue dark:bg-main-gold">Contactez-nous</a>
+                <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white bg-main-color dark:bg-main-color">Contactez-nous</a>
             </div>
         </main>
     </div>
-    <!-- <section class="relative overflow-hidden">
-        <div class="absolute -z-1 bottom-0 left-0 h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
-        <div class="container">
-            <div class="title">
-                <h2>We are ready to help</h2>
-                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
-            </div> 
-            <div class="video relative mx-auto max-w-[770px] max-h-[400px]">
-                <img src="images/video/video.jpg" alt="" class="w-full rounded-md">
-                <div class="play-btn cursor-pointer flex-center absolute top-1/2 left-1/2 -translate-1/2 bg-white text-main-blue rounded-full size-[70px] duration-120 opacity-70 hover:opacity-100">
-                    <ion-icon class="text-[25px]" name="play"></ion-icon>
-                </div>
-                <div class="embed hidden opacity-0 duration-120 fixed left-1/2 top-1/2 -translate-1/2 w-full max-w-[870px] z-999">
-                    <iframe class="w-full h-[450px] mx-[30px] max-[360px]:mx-[15px]" src="https://www.youtube.com/embed/IxX_QHay02M?list=RDIxX_QHay02M" title="W&amp;W - OIIA OIIA (Spinning Cat)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <ion-icon name="close-outline" class="close-video absolute top-[-50px] right-[18px] max-[360px]:right-[5px] text-[50px] cursor-pointer z-999"></ion-icon>
-                </div>
-                
-            </div>
-        </div>
-    </section> -->
     <section id="about">
         <div class="container">
             <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
@@ -203,7 +183,7 @@
             </div>
         </div>
     </section>
-    <section class="dark:bg-dark-secondary-color bg-secondary-color relative">
+    <section class="dark:bg-dark-alt-color bg-white relative">
         <div class="container">
             <img class="w-[250px] absolute bottom-0 left-0 opacity-30" src="images/wavy-lines.png" alt="">
             <div class="title">
@@ -273,8 +253,8 @@
             </div>
             <div class="sub-type flex-center">
                 <span class="active">Monthly</span>
-                <div class="radio relative mx-4 py-3 px-7 bg-blue-bg-color rounded-[50px] cursor-pointer">
-                    <div class="outer-circle duration-100 absolute rounded-full bg-main-blue p-3.5 top-0 left-0 translate-y-[-2px]">
+                <div class="radio relative mx-4 py-3 px-7 bg-main-bg-color rounded-[50px] cursor-pointer">
+                    <div class="outer-circle duration-100 absolute rounded-full bg-main-color p-3.5 top-0 left-0 translate-y-[-2px]">
                         <div class="inner-circle absolute rounded-full bg-white p-2 top-1/2 left-1/2 -translate-1/2"></div>
                     </div>
                 </div>
@@ -398,7 +378,7 @@
             </div>
         </div>
     </section>
-    <section id="blog" class="bg-secondary-color dark:bg-dark-secondary-color">
+    <section id="blog" class="bg-white dark:bg-dark-alt-color">
         <div class="container">
             <div class="title">
                 <h2>Our Latest Blog</h2>
@@ -493,7 +473,7 @@
                         <label for="message">Your Message</label>
                         <textarea id="message" placeholder="Enter your Message" class="mb-8 h-[150px] resize-none"></textarea>
                     </div>
-                    <input type="submit" value="Submit Ticket" class="cursor-pointer !bg-main-blue !text-white !w-fit !py-3 !px-9 font-medium duration-150 hover:contrast-125">
+                    <input type="submit" value="Submit Ticket" class="cursor-pointer !bg-main-color !text-white !w-fit !py-3 !px-9 font-medium duration-150 hover:contrast-125">
                 </form>
                 <form action="" class="subscribe flex-center flex-col dark:bg-dark-box bg-white rounded-sm shadow-box-shadow w-full lg:w-5/12 xl:w-4/12 px-11 py-15">
                     <div class="title pb-12 !mb-11 border-b-1 border-gray-300 dark:border-gray-700">
@@ -502,12 +482,12 @@
                     </div>
                     <input type="text" id="name" placeholder="Enter your Name">
                     <input type="text" id="email" placeholder="Enter your Email">
-                    <input type="submit" value="Subscribe" class="cursor-pointer !bg-main-blue !text-white !py-3 !px-9 font-medium duration-150 hover:contrast-125">
+                    <input type="submit" value="Subscribe" class="cursor-pointer !bg-main-color !text-white !py-3 !px-9 font-medium duration-150 hover:contrast-125">
                 </form>
             </div>
         </div>
     </section>
-    <footer class="bg-secondary-color dark:bg-dark-box">
+    <footer class="bg-white dark:bg-dark-box">
         <div class="container">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-x-10 gap-y-10 sm:gap-y-15 py-15 tb:pt-25">
                 <div class="social lg:w-5/12">

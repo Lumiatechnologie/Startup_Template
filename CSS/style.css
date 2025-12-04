@@ -16,23 +16,24 @@
 }
 
 @theme {
-    --color-secondary-color: #eff2f9;
+    --color-light-color: #efefef;
+    --color-light-alt-color: #eff2f9;
     --color-dark-main-color: #121723;
-    --color-dark-secondary-color: #181c28;
+    --color-dark-alt-color: #181c28;
     --color-header-overlay: rgba(63, 62, 62, 0.336);
     --color-overlay: rgba(10, 14, 29, 0.7);
-    --color-main-blue: #4b6cf7;
-    --color-blue-bg-color: rgba(74, 109, 247, 0.2);
-    --color-main-gold: #EFBF04;
-    --color-gold-bg-color: rgba(239, 191, 4, 0.2);
+    --color-main-color: #4b6cf7;
+    --color-main-bg-color: rgba(74, 109, 247, 0.2);
+    --color-secondary-color: #EFBF04;
+    --color-secondary-bg-color: rgba(239, 191, 4, 0.2);
     --color-main-text: #788293;
     --color-main-text-alt: #959cb1;
     --color-dark-box: #1d232f;
     --color-dark-login: #2c303b;
     --breakpoint-tb: 62rem;
     --shadow-box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.1);
-    --shadow-hover-box: 0px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-dark-hover-box: 0px 5px 15px #1e232e;
+    --shadow-dark-hover-box: 0px 5px 20px 5px rgba(239, 191, 4, 0.3);
+    --shadow-dark-hover-box: 0px 5px 15px 5px rgba(75 ,108 ,247 ,0.4);
 }
 
 @utility flex-center {
@@ -42,11 +43,11 @@
 }
 
 header nav a {
-    @apply hover:text-main-blue hover:dark:text-main-gold duration-100 max-[992px]:py-3 lg:text-[17px]
+    @apply hover:text-main-color hover:dark:text-main-color duration-100 max-[992px]:py-3 lg:text-[17px]
 }
 
 header a.active {
-    @apply text-main-blue dark:text-main-gold font-semibold duration-100
+    @apply text-main-color dark:text-main-color font-semibold duration-100
 }
 
 header nav .sign a{
@@ -78,7 +79,7 @@ section, main {
 }
 
 .services .box .icon {
-    @apply flex-center text-main-blue dark:text-main-gold bg-blue-bg-color dark:bg-gold-bg-color text-5xl rounded-[6px] w-[70px] h-[70px] py-[12px] px-[10px]
+    @apply flex-center text-main-color dark:text-main-color bg-main-bg-color dark:bg-main-bg-color text-5xl rounded-[6px] w-[70px] h-[70px] py-[12px] px-[10px]
 }
 
 .services .box ion-icon {
@@ -98,7 +99,7 @@ section, main {
 }
 
 #about .part-1 .checklist li>div {
-    @apply flex-center rounded-md text-main-blue dark:text-main-gold bg-blue-bg-color dark:bg-gold-bg-color size-[30px]
+    @apply flex-center rounded-md text-main-color dark:text-main-color bg-main-bg-color dark:bg-main-bg-color size-[30px]
 }
 
 #about .part-1 .checklist li ion-icon {
@@ -141,11 +142,60 @@ section, main {
 #about .part-2 fieldset:hover legend h2,
 #about .part-2 fieldset.active legend ion-icon,
 #about .part-2 fieldset.active legend h2{
-    @apply  text-main-blue dark:text-main-gold duration-250
+    @apply  text-main-color dark:text-main-color duration-250
+}
+
+.services .box {
+    @apply dark:bg-dark-alt-color px-8 py-10 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box
+}
+
+.services .box .type {
+    @apply flex items-center justify-between mb-2
+}
+
+.services .box .type .price {
+    @apply flex items-center
+}
+
+.services .box .type .price h3,
+.services .box .type .price h4 {
+    @apply m-0 text-[32px] font-bold dark:text-white
+}
+
+.services .box .type .price span {
+    @apply font-medium text-lg text-main-text translate-y-[3.5px]
+}
+
+.services .box .type .sub {
+    @apply font-bold dark:text-white text-xl
+}
+
+.services .box p {
+    @apply mb-7
+}
+
+.services .box .btn {
+    @apply bg-main-color text-white text-center py-3 duration-150 hover:contrast-125 cursor-pointer mb-8 rounded-sm font-semibold text-base
+}
+
+.services .box ul {
+    @apply pt-9 border-t-1 dark:border-gray-700 border-gray-300 space-y-3
+}
+
+.services .box ul li {
+    @apply flex items-center gap-2
+}
+
+.services .box ul li ion-icon {
+    @apply text-main-color bg-main-bg-color rounded-full text-[13px] p-0.5
+}
+
+.services .box ul li span {
+    @apply text-main-text
 }
 
 .users .box {
-    @apply bg-white dark:bg-[#1d2430] p-8 lg:px-5 xl:p-8 rounded-sm duration-200 shadow-box-shadow hover:shadow-hover-box dark:hover:shadow-dark-hover-box
+    @apply bg-white dark:bg-[#1d2430] p-8 lg:px-5 xl:p-8 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box
 }
 
 .users .box .stars ion-icon {
@@ -173,60 +223,11 @@ section, main {
 }
 
 .sub-type span.active {
-    @apply text-main-blue
-}
-
-.subs .box {
-    @apply dark:bg-dark-secondary-color px-8 py-10 rounded-sm duration-200 shadow-box-shadow hover:shadow-hover-box dark:hover:shadow-dark-hover-box
-}
-
-.subs .box .type {
-    @apply flex items-center justify-between mb-2
-}
-
-.subs .box .type .price {
-    @apply flex items-center
-}
-
-.subs .box .type .price h3,
-.subs .box .type .price h4 {
-    @apply m-0 text-[32px] font-bold dark:text-white
-}
-
-.subs .box .type .price span {
-    @apply font-medium text-lg text-main-text translate-y-[3.5px]
-}
-
-.subs .box .type .sub {
-    @apply font-bold dark:text-white text-xl
-}
-
-.subs .box p {
-    @apply mb-7
-}
-
-.subs .box .btn {
-    @apply bg-main-blue text-white text-center py-3 duration-150 hover:contrast-125 cursor-pointer mb-8 rounded-sm font-semibold text-base
-}
-
-.subs .box ul {
-    @apply pt-9 border-t-1 dark:border-gray-700 border-gray-300 space-y-3
-}
-
-.subs .box ul li {
-    @apply flex items-center gap-2
-}
-
-.subs .box ul li ion-icon {
-    @apply text-main-blue bg-blue-bg-color rounded-full text-[13px] p-0.5
-}
-
-.subs .box ul li span {
-    @apply text-main-text
+    @apply text-main-color
 }
 
 .blog .box {
-    @apply rounded-sm overflow-hidden duration-200 shadow-box-shadow hover:shadow-hover-box dark:hover:shadow-dark-hover-box
+    @apply rounded-sm overflow-hidden duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box
 }
 
 .blog .box .pic {
@@ -238,11 +239,11 @@ section, main {
 }
 
 .blog .box .pic span {
-    @apply absolute top-0 right-0 translate-x-[-23px] translate-y-[23px] font-bold text-white text-sm bg-main-blue rounded-[50px] px-4 py-2
+    @apply absolute top-0 right-0 translate-x-[-23px] translate-y-[23px] font-bold text-white text-sm bg-main-color rounded-[50px] px-4 py-2
 }
 
 .blog .box h4{
-    @apply duration-100 hover:text-main-blue dark:text-white w-fit font-bold text-xl sm:text-2xl cursor-pointer
+    @apply duration-100 hover:text-main-color dark:text-white w-fit font-bold text-xl sm:text-2xl cursor-pointer
 }
 
 .blog .box p{
@@ -282,7 +283,7 @@ label{
 
 input,
 #contact .ticket textarea{
-    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-main-blue
+    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-secondary-color dark:focus:border-main-color
 }
 
 #contact .subscribe input:not(:last-of-type){
@@ -303,7 +304,7 @@ footer h4{
 }
 
 footer a{
-    @apply block duration-125 hover:text-main-blue
+    @apply block duration-125 hover:text-main-color
 }
 
 footer a:not(:last-of-type){
@@ -312,7 +313,7 @@ footer a:not(:last-of-type){
 
 footer .social ion-icon,
 footer .social i{
-    @apply text-[20px] hover:text-main-blue cursor-pointer duration-125
+    @apply text-[20px] hover:text-main-color cursor-pointer duration-125
 }
 
 footer .links{
@@ -320,7 +321,7 @@ footer .links{
 }
 
 footer .credits a{
-    @apply m-0 font-bold text-black dark:text-white hover:text-main-blue
+    @apply m-0 font-bold text-black dark:text-white hover:text-main-color
 }
 
 footer .credits div{
@@ -329,18 +330,18 @@ footer .credits div{
 
 .sign .alt-log a,
 .sign a.submit{
-    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-main-text-alt hover:text-main-blue dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-main-blue
+    @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-main-text-alt hover:text-main-color dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-secondary-color
 }
 
 .sign .alt-log span.h-line{
     @apply hidden min-[575px]:block h-[2px] w-[70px] bg-[#78829380]
 }
 .sign .credentials input{
-    @apply shadow-hover-box
+    @apply shadow-dark-hover-box
 }
 
 .sign .check a{
-    @apply text-main-blue
+    @apply text-main-color
 }
 
 .container {

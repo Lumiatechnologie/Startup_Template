@@ -476,7 +476,14 @@
                         </div>
                         <div class="email max-md:mb-16 md:w-1/2">
                             <label for="email">Services</label>
-                            <input type="mail" id="email" placeholder="Choisissez un service">
+                                <input type="text" id="service" placeholder="Choisir ou saisir un service" list="service-options">
+                                <datalist id="service-options">
+                                    <option value="UX/UI Design"></option>
+                                    <option value="Développement Web"></option>
+                                    <option value="Applications Mobiles"></option>
+                                    <option value="Formation"></option>
+                                    <option value="Autre"></option>
+                                </datalist>
                         </div>
                     </div>
                     <div class="message">

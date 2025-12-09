@@ -83,11 +83,14 @@ nav_ele.forEach(ele => {
             a.classList.remove("active")
         })
         ele.classList.add("active")
+        side_menu_toggle()
     })
 })
 
 // open/close side menu (mobile)
-side_menu_btn.addEventListener("click", () => {
+side_menu_btn.addEventListener("click", side_menu_toggle)
+
+function side_menu_toggle(){
     if (side_menu.classList.contains("max-[992px]:hidden")) {
         side_menu.classList.toggle("max-[992px]:hidden")
         setTimeout(() => {
@@ -101,18 +104,18 @@ side_menu_btn.addEventListener("click", () => {
             side_menu.classList.toggle("max-[992px]:hidden")
         }, 150);
     }
-})
+}
 
 // header style on scroll
 function HeaderEffect() {
     if (window.pageYOffset > 10) {
         header_container.classList.remove("py-6")
         header_container.classList.add("tb:py-3", "py-4")
-        header.classList.add("backdrop-blur-sm", "bg-opacity-20", "shadow-md", "dark:bg-header-overlay")
+        header.classList.add("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     } else {
         header_container.classList.add("py-6")
         header_container.classList.remove("tb:py-3", "py-4")
-        header.classList.remove("backdrop-blur-sm", "bg-opacity-20", "shadow-md", "dark:bg-header-overlay")
+        header.classList.remove("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     }
 }
 
@@ -167,29 +170,3 @@ legends.forEach(legend => {
     });
 });
 
-// toggle subscription type and update prices
-radio.addEventListener("click", () => {
-    radio_circle.classList.toggle("left-0")
-    radio_circle.classList.toggle("left-[50%]")
-
-    sub_type.forEach(ele => {
-        ele.classList.toggle("active")
-    })
-
-    price_period.forEach(ele => {
-        if (sub_type[1].classList.contains("active")) {
-            ele.textContent = "/yr"
-        } else {
-            ele.textContent = "/mo"
-        }
-    })
-
-    price.forEach(ele => {
-        let basePrice = parseInt(ele.textContent);
-        if (sub_type[1].classList.contains("active")) {
-            ele.textContent = Math.round(basePrice + 157);
-        } else {
-            ele.textContent = Math.round(basePrice - 157);
-        }
-    })
-})

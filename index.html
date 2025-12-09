@@ -10,17 +10,16 @@
 </head>
 <body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md bg-main-color dark:bg-main-color text-white duration-120 hover:contrast-150">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md bg-main-color dark:bg-main-color text-white">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
-    <div class="dark:bg-dark-alt-color">
-        <header class="fixed w-full top-0 left-0 duration-80 z-9999">
+    <header class="fixed w-full top-0 left-0 duration-80 z-9999">
         <div class="container py-6 flex items-center justify-between duration-80 text-[16px]">
             <a href="index.html" aria-label="Home" class="w-30 sm:w-40 lg:w-43">
                 <img class="logo w-full" src="images/logo/logo.png" alt="">
             </a>
             <div id="nav" class="flex items-center tb:justify-between gap-x-9">
-                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-18 max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
+                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-19 max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
                     <a class="active" href="#home">Accueil</a>
                     <a href="#about">Á propos de nous</a>
                     <a href="#services">Services</a>
@@ -40,21 +39,23 @@
             </div>
             
         </div>
-        </header>
-        <div class="max-md:opacity-30 absolute top-0 right-0 max-[376px]:w-[440px]">
-            <img class="w-full hero-1" src="images/hero/shape-1-dark.svg" alt=""> 
-        </div>
-        <main id="home" class="relative h-[100vh] max-[575px]:!pt-[110px]">
-            <img class="max-md:opacity-30 absolute bottom-0 left-0 hero-2" src="images/hero/shape-2-dark.svg" alt="">
-            <div class="container flex-center flex-col xl:pt-[180px] xl:pb-[160px] md:pt-[80px] md:pb-[120px] pb-16 pt-[60px] w-full h-[525px]">
-                <div class="max-w-[800px] text-center mb-15">
-                    <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
-                    <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
-                </div>
-                <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white bg-main-color dark:bg-main-color">Contactez-nous</a>
-            </div>
-        </main>
+    </header>
+    <div class="max-md:opacity-30 absolute top-0 right-0 max-[376px]:w-[440px]">
+        <img class="w-full hero-1" src="images/hero/shape-1-dark.svg" alt=""> 
     </div>
+    <main id="home" class="relative h-[100vh] max-[575px]:!pt-[110px] ">
+        <img class="max-md:opacity-30 absolute bottom-0 left-0 hero-2" src="images/hero/shape-2-dark.svg" alt="">
+        <div class="container flex-center flex-col pb-16 pt-[60px] md:pt-[70px] md:pb-[120px] xl:pt-[140px] xl:pb-[160px] w-full">
+            <div class="max-w-[800px] text-center mb-15">
+                <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
+                <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
+            </div>
+            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white bg-main-color dark:bg-main-color">Contactez-nous</a>
+            <div class="mouse w-[40px] h-[25px] border-2 rounded-[50px] rotate-90 mt-15 flex-center">
+                <div class="wheel w-[15px] h-[4px] rounded-[50px] bg-main-color translate-y-[-0.6px]"></div>
+            </div>
+        </div>
+    </main>
     <section id="about">
         <div class="container">
             <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
@@ -183,14 +184,13 @@
             </div>
         </div>
     </section>
-    <section class="dark:bg-dark-alt-color bg-white relative">
+    <section id="clients" class="dark:bg-dark-alt-color bg-white relative">
         <div class="container">
             <img class="w-[250px] absolute bottom-0 left-0 opacity-30" src="images/wavy-lines.png" alt="">
             <div class="title">
                 <h2>Ce que nos clients disent de nous</h2>
-                <!-- <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p> -->
             </div>
-            <div class="users grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="box">
                     <div class="stars">
                         <ion-icon name="star"></ion-icon>
@@ -201,7 +201,6 @@
                     </div>
                     <p>“J'ai confié la création de mon site achshop.ma à cette équipe, et je suis plus que satisfait du résultat. Le site est à la fois élégant et très fonctionnel, offrant une expérience d'achat fluide pour mes clients. L'intégration de publicités Facebook Ads.</p>
                     <div class="profile">
-                        <!-- <img src="images/testimonials/auth-01.png" alt=""> -->
                         <div class="text">
                             <h4>Abderezak</h4>
                             <span>Fondateur d'AchShop</span>
@@ -218,7 +217,6 @@
                     </div>
                     <p>“J'ai fait appel à cette équipe pour créer mon site web, et je suis ravie du résultat ! Le site est professionnel et facile à naviguer. Depuis le lancement, j'ai observé une nette augmentation des prises de rendez-vous et un engagement accru de mes patients.</p>
                     <div class="profile">
-                        <!-- <img src="images/testimonials/auth-02.png" alt=""> -->
                         <div class="text">
                             <h4>Dr. Mounia Mekouar</h4>
                             <span>Médecin dentiste</span>
@@ -235,7 +233,6 @@
                     </div>
                     <p>“Travailler avec cette équipe a été un véritable plaisir. Ils ont parfaitement compris nos besoins et ont créé un site moderne, intuitif et performant. Le processus a été fluide, avec une excellente communication et des délais respectés.</p>
                     <div class="profile">
-                        <!-- <img src="images/testimonials/auth-03.png" alt=""> -->
                         <div class="text">
                             <h4>Nabil</h4>
                             <span>CEO de WBDS PLC</span>
@@ -245,212 +242,115 @@
             </div>
         </div>
     </section>
-    <!-- <section id="pricing">
+    <section id="portfolio" class="bg-white dark:bg-dark-alt-color">
         <div class="container">
             <div class="title">
-                <h2>Simple and Affordable Pricing</h2>
-                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+                <h2>Nos Réalisations</h2>
+                <p>Découvrez nos projets récents. Chaque réalisation illustre notre engagement envers l'excellence technique et le design haut de gamme.</p>
             </div>
-            <div class="sub-type flex-center">
-                <span class="active">Monthly</span>
-                <div class="radio relative mx-4 py-3 px-7 bg-main-bg-color rounded-[50px] cursor-pointer">
-                    <div class="outer-circle duration-100 absolute rounded-full bg-main-color p-3.5 top-0 left-0 translate-y-[-2px]">
-                        <div class="inner-circle absolute rounded-full bg-white p-2 top-1/2 left-1/2 -translate-1/2"></div>
-                    </div>
-                </div>
-                <span>Yearly</span>
-            </div>
-            <div class="subs grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="box">
-                    <div class="type">
-                        <div class="price">
-                            <h4>$</h4>
-                            <h3>40</h3>
-                            <span>/mo</span>
-                        </div>
-                        <div class="sub">Lite</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.</p>
-                    <div class="btn">Start Free rial</div>
-                    <ul>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>All UI Components</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Use with Unlimited Projects</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Commercial Use</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Email Support</span>
-                        </li>
-                        <li>
-                            <ion-icon name="close-sharp"></ion-icon>
-                            <span>Lifetime Access</span>
-                        </li>
-                        <li>
-                            <ion-icon name="close-sharp"></ion-icon>
-                            <span>Free Lifetime Updates</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <div class="type">
-                        <div class="price">
-                            <h4>$</h4>
-                            <h3>399</h3>
-                            <span>/mo</span>
-                        </div>
-                        <div class="sub">Basic</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.</p>
-                    <div class="btn">Start Free rial</div>
-                    <ul>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>All UI Components</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Use with Unlimited Projects</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Commercial Use</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Email Support</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Lifetime Access</span>
-                        </li>
-                        <li>
-                            <ion-icon name="close-sharp"></ion-icon>
-                            <span>Free Lifetime Updates</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="box">
-                    <div class="type">
-                        <div class="price">
-                            <h4>$</h4>
-                            <h3>589</h3>
-                            <span>/mo</span>
-                        </div>
-                        <div class="sub">Plus</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim.</p>
-                    <div class="btn">Start Free rial</div>
-                    <ul>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>All UI Components</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Use with Unlimited Projects</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Commercial Use</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Email Support</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Lifetime Access</span>
-                        </li>
-                        <li>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
-                            <span>Free Lifetime Updates</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- <section id="blog" class="bg-white dark:bg-dark-alt-color">
-        <div class="container">
-            <div class="title">
-                <h2>Our Latest Blog</h2>
-                <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
-            </div>
-            <div class="blog grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 ">
                 <div class="box">
                     <div class="pic">
-                        <img src="images/blog/blog-01.jpg" alt="">
-                        <span>Creative</span>
+                        <img src="images/logo/Dr.Mekouar Mounia.png" alt="">
+                        <span>Site Vitrine</span>
+                        <a href="https://drmekouarmounia.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                     <div class="p-8">
-                        <h4>Best UI components for modern websites</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.</p>
-                        <div class="profile">
-                            <img src="images/blog/author-01.png" alt="">
-                            <div class="text">
-                                <h5>By Samuyl Joshi</h5>
-                                <span>Graphic Designer</span>
-                            </div>
-                            <div class="date">
-                                <h5>Date</h5>
-                                <span>2025</span>
-                            </div>
-                        </div>
+                        <h4>Dr Mekouar Mounia</h4>
+                        <p>Site vitrine professionnelle offrant des prestations en chirurgie dentaire à Casablanca.</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="pic">
-                        <img src="images/blog/blog-02.jpg" alt="">
-                        <span>Computer</span>
+                        <img src="images/logo/Ach Shop.png" alt="">
+                        <span>E-commerce</span>
+                        <a href="https://achshop.ma"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                     <div class="p-8">
-                        <h4>9 simple ways to improve your design skills</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.</p>
-                        <div class="profile">
-                            <img src="images/blog/author-02.png" alt="">
-                            <div class="text">
-                                <h5>By Musharof Chy</h5>
-                                <span>Content Writer</span>
-                            </div>
-                            <div class="date">
-                                <h5>Date</h5>
-                                <span>2025</span>
-                            </div>
-                        </div>
+                        <h4>Ach Shop</h4>
+                        <p>Site e-commerce marocain de mode, conçu pour une expérience d'achat en ligne fluide et élégante.</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="pic">
-                        <img src="images/blog/blog-03.jpg" alt="">
-                        <span>Design</span>
+                        <img src="images/logo/Sign Print.png" alt="">
+                        <span>Signalétique</span>
+                        <a href="https://signprint.ma"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                     <div class="p-8">
-                        <h4>Tips to quickly improve your coding speed</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.</p>
-                        <div class="profile">
-                            <img src="images/blog/author-03.png" alt="">
-                            <div class="text">
-                                <h5>By Lethium Deo</h5>
-                                <span>Graphic Designer</span>
-                            </div>
-                            <div class="date">
-                                <h5>Date</h5>
-                                <span>2025</span>
-                            </div>
-                        </div>
+                        <h4>Sign Print</h4>
+                        <p>Création d'un site complet pour une société de signalétique, couvrant conseil, design, fabrication et installation.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/Chama Negoce.png" alt="">
+                        <span>E-commerce</span>
+                        <a href="https://chamanegocetools.ma"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                    </div>
+                    <div class="p-8">
+                        <h4>Chama Negoce</h4>
+                        <p>Boutique en ligne d'outillage professionnel, proposant des outils, consommables et équipements pour bricolage et industrie.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/WBDS Auto.png" alt="">
+                        <span>Automatisation</span>
+                        <a href="https://wbdsplc.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                    </div>
+                    <div class="p-8">
+                        <h4>WBDS</h4>
+                        <p>Site B2B d'automatisation industrielle, mettant en avant une large gamme de pièces détachées et de solutions pour les industriels.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/Dar Elotmani.png" alt="">
+                        <span>Tourisme</span>
+                        <a href="https://dar-elotmani.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                    </div>
+                    <div class="p-8">
+                        <h4>DAR ELOTMANI</h4>
+                        <p>Vitrine digitale pour un groupe de logements touristiques (riads et appartements) à Marrakech.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/Syndexpress.png" alt="">
+                        <span>SaaS</span>
+                        <!-- <a href="#"  target="_blank"><ion-icon name="open-outline"></ion-icon></a> -->
+                    </div>
+                    <div class="p-8">
+                        <h4>SYNDEXPRESS</h4>
+                        <p>Mise en ligne du MVP de cette solution SaaS dédiée à la gestion syndicale moderne au Maroc.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/Learn It Services.png" alt="">
+                        <span>IT/BPO</span>
+                        <a href="https://leanit-services.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                    </div>
+                    <div class="p-8">
+                        <h4>LEANIT-SERVICES</h4>
+                        <p>Site vitrine d'une agence IT/BPO marocaine, présentant leurs services de développement, migration, et support technique.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="pic">
+                        <img src="images/logo/Lighthouse Law Firm.png" alt="">
+                        <span>Droit</span>
+                        <a href="https://lighthouse-lawfirm.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                    </div>
+                    <div class="p-8">
+                        <h4>LIGHTHOUSE LAW FIRM</h4>
+                        <p>Réalisation d'un site professionnel au design sobre et responsive, optimisé pour l'accessibilité et le référencement.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <section id="contact" class="w-full">
         <div class="container w-full">
             <div class="flex max-tb:flex-wrap gap-8">
@@ -538,29 +438,14 @@
                 </div>
                 <div class="contact links">
                     <h4>Contact</h4>
-                    <a href="mailto:contact@lumiatechnologie.com">contact@lumiatechnologie.com</a>
+                    <a href="mailto:contact@lumiatechnologie.com" class="truncate">contact@lumiatechnologie.com</a>
                     <a href="tel:+33666197344">+33 666 197 344</a>
                 </div>
-                
-                
             </div>
             <div class="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent"></div>
             <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
                 <div class="flex">
-                    <!-- <p>Template by</p> -->
                     <a href="https://lumiatechnologie.com/">© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</a>
-                    <!-- <p>and</p> 
-                    <a href="https://nextjstemplates.com/">Next.js Templates</a>
-                </div>
-                <div class="flex">
-                    <p>Developed by</p>
-                    <a href="https://github.com/MedReda0">Mohamed Reda</a>
-                </div>
-                <div class="flex">
-                    <p>Icons by</p>
-                    <a href="https://www.flaticon.com/uicons">Flaticon</a>
-                    <p>and</p>
-                    <a href="https://ionic.io/ionicons">Ionicons</a> -->
                 </div>
             </div>
         </div>

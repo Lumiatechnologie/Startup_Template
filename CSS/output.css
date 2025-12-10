@@ -420,8 +420,8 @@
     --tw-translate-y: calc(var(--spacing) * 1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-y-\[-0\.6px\] {
-    --tw-translate-y: -0.6px;
+  .translate-y-\[-0\.5px\] {
+    --tw-translate-y: -0.5px;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-\[2px\] {
@@ -861,9 +861,9 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .max-\[575px\]\:\!pt-\[110px\] {
+  .max-\[575px\]\:\!pt-\[150px\] {
     @media (width < 575px) {
-      padding-top: 110px !important;
+      padding-top: 150px !important;
     }
   }
   .max-\[376px\]\:w-\[440px\] {
@@ -1701,8 +1701,12 @@ section, main {
 #portfolio .box .pic {
   position: relative;
   margin-bottom: calc(var(--spacing) * 2);
-  height: 370px;
-  overflow: hidden;
+  @media (width >= 40rem) {
+    height: 380px;
+  }
+  @media (width >= 40rem) {
+    overflow: hidden;
+  }
 }
 #portfolio .box .pic img {
   width: 100%;
@@ -1802,6 +1806,29 @@ section, main {
   translate: var(--tw-translate-x) var(--tw-translate-y);
   opacity: 100%;
 }
+#portfolio .box .techs {
+  margin-bottom: calc(var(--spacing) * 5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: calc(var(--spacing) * 3);
+  row-gap: calc(var(--spacing) * 2);
+}
+#portfolio .box .techs span {
+  border-radius: 50px;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-main-color);
+  background-color: var(--color-main-bg-color);
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 1);
+  text-align: center;
+  font-size: 11px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-main-color);
+  text-transform: uppercase;
+}
 #portfolio .box h4 {
   width: fit-content;
   cursor: pointer;
@@ -1829,38 +1856,6 @@ section, main {
   font-weight: var(--font-weight-medium);
   --tw-duration: 100ms;
   transition-duration: 100ms;
-}
-#portfolio .box .profile {
-  margin-top: calc(var(--spacing) * 5);
-  display: flex;
-  align-items: center;
-  gap: calc(var(--spacing) * 5);
-}
-#portfolio .box .profile .text {
-  border-right-style: var(--tw-border-style);
-  border-right-width: 1px;
-  border-color: var(--color-gray-300);
-  padding-right: calc(var(--spacing) * 5);
-  --tw-duration: 100ms;
-  transition-duration: 100ms;
-  &:where(.dark, .dark *) {
-    border-color: var(--color-gray-700);
-  }
-}
-#portfolio .box .profile h5 {
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
-  --tw-font-weight: var(--font-weight-medium);
-  font-weight: var(--font-weight-medium);
-  --tw-duration: 100ms;
-  transition-duration: 100ms;
-  &:where(.dark, .dark *) {
-    color: var(--color-white);
-  }
-}
-#portfolio .box .profile span {
-  font-size: 12px;
-  color: var(--color-main-text);
 }
 #contact .title {
   margin: calc(var(--spacing) * 0);
@@ -1920,10 +1915,11 @@ input, #contact .ticket textarea {
 footer {
   color: var(--color-main-text-alt);
 }
-footer .logo, footer h4 {
+footer .logo {
   margin-bottom: calc(var(--spacing) * 10);
 }
 footer h4 {
+  margin-bottom: calc(var(--spacing) * 6);
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-font-weight: var(--font-weight-bold);

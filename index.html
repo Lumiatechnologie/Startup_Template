@@ -10,7 +10,7 @@
 </head>
 <body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md bg-main-color dark:bg-main-color text-white">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color dark:bg-main-color text-white">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
     <header class="fixed w-full top-0 left-0 duration-80 z-9999">
@@ -19,7 +19,7 @@
                 <img class="logo w-full" src="images/logo/logo.png" alt="">
             </a>
             <div id="nav" class="flex items-center tb:justify-between gap-x-9">
-                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-19 max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
+                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-[71px] max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
                     <a class="active" href="#home">Accueil</a>
                     <a href="#about">Á propos de nous</a>
                     <a href="#services">Services</a>
@@ -50,7 +50,7 @@
                 <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
                 <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
             </div>
-            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white bg-main-color dark:bg-main-color">Contactez-nous</a>
+            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color dark:bg-main-color">Contactez-nous</a>
             <div class="mouse w-[40px] h-[25px] border-2 rounded-[50px] rotate-90 mt-15 flex-center">
                 <div class="wheel w-[15px] h-[4px] rounded-[50px] bg-main-color translate-y-[-0.5px]"></div>
             </div>
@@ -253,7 +253,7 @@
                     <div class="pic">
                         <img src="images/logo/Dr.Mekouar Mounia.png" alt="">
                         <span>Site Vitrine</span>
-                        <a href="https://drmekouarmounia.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                        <a href="https://drmekouarmounia.com" target="_blank" rel="noopener noreferrer" title="Ouvrir le site Dr Mekouar Mounia dans un nouvel onglet"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                     <div class="p-8">
                         <div class="techs">
@@ -270,7 +270,7 @@
                     <div class="pic">
                         <img src="images/logo/Chama Negoce.png" alt="">
                         <span>E-commerce</span>
-                        <a href="https://chamanegocetools.ma"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
+                        <a href="https://chamanegocetools.ma" target="_blank" rel="noopener noreferrer" title="Ouvrir le site Chama Negoce dans un nouvel onglet"><ion-icon name="open-outline"></ion-icon></a>
                     </div>
                     <div class="p-8">
                         <div class="techs">
@@ -278,34 +278,6 @@
                         </div>
                         <h4>Chama Negoce</h4>
                         <p>Boutique en ligne d'outillage professionnel, proposant des outils, consommables et équipements pour bricolage et industrie.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="pic">
-                        <img src="images/logo/WBDS Auto.png" alt="">
-                        <span>Automatisation</span>
-                        <a href="https://wbdsplc.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
-                    </div>
-                    <div class="p-8">
-                        <div class="techs">
-                            <span></span>
-                        </div>
-                        <h4>WBDS</h4>
-                        <p>Site B2B d'automatisation industrielle, mettant en avant une large gamme de pièces détachées et de solutions pour les industriels.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="pic">
-                        <img src="images/logo/Dar Elotmani.png" alt="">
-                        <span>Tourisme</span>
-                        <a href="https://dar-elotmani.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
-                    </div>
-                    <div class="p-8">
-                        <div class="techs">
-                            <span></span>
-                        </div>
-                        <h4>DAR ELOTMANI</h4>
-                        <p>Vitrine digitale pour un groupe de logements touristiques (riads et appartements) à Marrakech.</p>
                     </div>
                 </div>
                 <div class="box">
@@ -319,39 +291,15 @@
                             <span>react</span>
                             <span>react native</span>
                             <span>springboot</span>
+                            <span>aws</span>
                         </div>
                         <h4>SYNDEXPRESS</h4>
                         <p>Mise en ligne du MVP de cette solution SaaS dédiée à la gestion syndicale moderne au Maroc.</p>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="pic">
-                        <img src="images/logo/Learn It Services.png" alt="">
-                        <span>IT/BPO</span>
-                        <a href="https://leanit-services.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
-                    </div>
-                    <div class="p-8">
-                        <div class="techs">
-                            <span></span>
-                        </div>
-                        <h4>LEANIT-SERVICES</h4>
-                        <p>Site vitrine d'une agence IT/BPO marocaine, présentant leurs services de développement, migration, et support technique.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="pic">
-                        <img src="images/logo/Lighthouse Law Firm.png" alt="">
-                        <span>Droit</span>
-                        <a href="https://lighthouse-lawfirm.com"  target="_blank"><ion-icon name="open-outline"></ion-icon></a>
-                    </div>
-                    <div class="p-8">
-                        <div class="techs">
-                            <span>wordpress</span>
-                        </div>
-                        <h4>LIGHTHOUSE LAW FIRM</h4>
-                        <p>Réalisation d'un site professionnel au design sobre et responsive, optimisé pour l'accessibilité et le référencement.</p>
-                    </div>
-                </div>
+            </div>
+            <div class="button flex-center">
+                <a href="./portfolio.html" class="px-8 py-4 rounded-sm font-bold text-white bg-main-color dark:bg-main-color duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box mt-15">Voir Tous les Projets</a>
             </div>
         </div>
     </section>
@@ -394,7 +342,7 @@
                         <label for="message">Votre Message</label>
                         <textarea id="message" name="message" placeholder="Entrez votre message" class="mb-8 h-[150px] resize-none" required></textarea>
                     </div>
-                    <input type="submit" value="Envoyer votre demande" class="cursor-pointer !bg-main-color !text-white !w-fit !py-3 !px-9 font-medium duration-150 hover:contrast-125">
+                    <input type="submit" value="Envoyer votre demande" class="cursor-pointer duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box !bg-main-color !text-white !w-fit !py-3 !px-9 font-medium hover:contrast-125">
                 </form>
                 <!-- <form action="" class="subscribe flex-center flex-col dark:bg-dark-box bg-white rounded-sm shadow-box-shadow w-full lg:w-5/12 xl:w-4/12 px-11 py-15">
                     <div class="title pb-12 !mb-11 border-b-1 border-gray-300 dark:border-gray-700">
@@ -421,7 +369,7 @@
                         <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
+                        <a href="#" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </div>

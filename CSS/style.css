@@ -241,7 +241,7 @@ section, main {
 }
 
 #portfolio .box .pic {
-    @apply relative mb-2 sm:overflow-hidden sm:h-[380px]
+    @apply relative mb-2 sm:overflow-hidden sm:h-[380px] overflow-hidden
 }
 
 #portfolio .box .pic img {

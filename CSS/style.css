@@ -352,7 +352,7 @@ footer .credits div{
     @apply gap-[4px]
 }
 
-.sign .alt-log a,
+/* .sign .alt-log a,
 .sign a.submit{
     @apply w-full py-3 bg-gray-100 dark:bg-dark-login hover:bg-[rgba(74,109,247,0.1)] text-main-text-alt hover:text-main-color dark:shadow-dark-hover-box flex-center duration-225 rounded border-1 border-gray-200 dark:border-transparent hover:border-secondary-color
 }
@@ -366,7 +366,7 @@ footer .credits div{
 
 .sign .check a{
     @apply text-main-color
-}
+} */
 
 .container {
     width: 100%;

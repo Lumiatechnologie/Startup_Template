@@ -41,7 +41,7 @@ if (localStorage.theme == "light") {
 function pic_theme() {
     if (!document.body.classList.contains("dark")) {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo-alt.png"
+            logo.src = "images/logo/logo-alt.webp"
         })
         about_img_1.src = "images/about/about-image.svg"
         about_img_2.src = "images/about/about-image-2.svg"
@@ -49,7 +49,7 @@ function pic_theme() {
         // hero_2.src = "images/hero/shape-2.svg"
     } else {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo.png"
+            logo.src = "images/logo/logo.webp"
         })
         about_img_1.src = "images/about/about-image-dark.svg"
         about_img_2.src = "images/about/about-image-2-dark.svg"

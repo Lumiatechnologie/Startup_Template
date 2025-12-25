@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>LUMIATECH</title>
 </head>
 <body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color dark:bg-main-color text-white">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color text-white">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
     <header class="fixed w-full top-0 left-0 duration-80 z-9999">
@@ -36,29 +44,35 @@
                     <a href="sign-in.html" class="text-nowrap">Sign In</a>
                     <a href="sign-up.html" class="text-nowrap bg-main-color text-white py-3 px-8 md:px-9 lg:px-6 font-medium rounded-[3px] hover:contrast-125 duration-125">Sign Up</a>
                 </div> -->
-                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px] hover:text-main-color hover:dark:text-main-color"></i>
-                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
             </div>
-            
+            <div class="icons flex-center gap-x-2 tb:gap-x-6">
+                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
+                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <ion-icon name="logo-linkedin"  class=" border-r-1 border-[#ffffffb3] pr-6"></ion-icon>
+                </a>
+                <i class="theme fi fi-rc-moon max-tb:translate-y-1"></i>
+            </div>
         </div>
     </header>
-    <div class="max-md:opacity-30 absolute top-0 right-0 max-[376px]:w-[440px]">
-        <img class="w-full hero-1" src="images/hero/shape-1-dark.svg" alt=""> 
-    </div>
-    <main id="home" class="relative h-[100vh] max-[575px]:!pt-[150px] ">
-        <img class="max-md:opacity-30 absolute bottom-0 left-0 hero-2" src="images/hero/shape-2-dark.svg" alt="">
+    <main id="home" class="relative h-[100vh] max-[575px]:!pt-[150px] bg-[radial-gradient(circle_at_0%_0%,_rgba(37,99,235,0.6)_0,_#f9fafb_55%),radial-gradient(circle_at_100%_100%,_rgba(45,212,191,0.25)_0,_#f9fafb_60%)] dark:bg-[radial-gradient(circle_at_0%_0%,_rgba(59,130,246,0.35)_0,_rgba(2,6,23,1)_55%),radial-gradient(circle_at_100%_100%,_rgba(45,212,191,0.3)_0,_rgba(2,6,23,1)_60%)]">
         <div class="container flex-center flex-col pb-16 pt-[60px] md:pt-[70px] md:pb-[120px] xl:pt-[140px] xl:pb-[160px] w-full">
             <div class="max-w-[800px] text-center mb-15">
-                <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en solutions digitales innovantes</h2>
+                <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en <span class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">solutions digitales</span> innovantes</h2>
                 <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
             </div>
-            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color dark:bg-main-color">Contactez-nous</a>
+            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-gradient-to-r from-blue-500 to-violet-indigo">Contactez-nous</a>
             <div class="mouse w-[40px] h-[25px] border-2 rounded-[50px] rotate-90 mt-15 flex-center">
                 <div class="wheel w-[15px] h-[4px] rounded-[50px] bg-main-color translate-y-[-0.5px]"></div>
             </div>
         </div>
     </main>
-    <section id="about">
+    <section id="about" class="bg-[#f9fafb] dark:bg-[rgba(2,6,23,1)]">
         <div class="container">
             <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
                 <div class="text">
@@ -69,37 +83,85 @@
                     <ul class="checklist grid min-[575px]:grid-cols-2 tb:grid-cols-1 min-[75rem]:grid-cols-2 grid-rows-3 gap-y-5 gap-x-10 w-fit max-tb:mx-auto max-[35.938rem]:mx-0">
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>Développement Web et Mobile</span>
                         </li>
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>E-commerce</span>
                         </li>
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>UX/UI Design</span>
                         </li>
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>Backend & API</span>
                         </li>
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>Solutions Métier</span>
                         </li>
                         <li>
                             <div>
-                            <ion-icon name="checkmark-sharp"></ion-icon>
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fsstjlds.json"
+                                trigger="loop"
+                                delay="500"
+                                stroke="bold"
+                                colors="primary:#4b6cf7"
+                                style="width:25px;height:25px">
+                            </lord-icon>
                             </div>
                             <span>Accompagnement Stratégique</span>
                         </li>
@@ -115,28 +177,28 @@
                 </div>
                 <div class="text max-w-[470px]">
                     <fieldset>
-                        <legend class="title">
+                        <legend>
                             <ion-icon name="caret-forward-outline"></ion-icon>
                             <h2>Quelle est l'identité et la mission de Lumiatechnologie ?</h2>
                         </legend>
                         <p>Lumiatechnologie est une agence premium basée entre Saint-Étienne et Casablanca. Notre mission est de transformer votre vision en outils digitaux haut de gamme, fiables et évolutifs. Nous sommes des experts full-stack qui travaillent avec une approche orientée résultats.</p>
                     </fieldset>
                     <fieldset>
-                        <legend class="title">
+                        <legend>
                             <ion-icon name="caret-forward-outline"></ion-icon>
                             <h2>Quelles sont les spécialités et technologies utilisées ?</h2>
                         </legend>
                         <p>Front-end, nous maîtrisons React, Tailwind, et Next.js. Pour le Backend, nous utilisons Symfony, Spring Boot et Node.js. Nos bases de données incluent MySQL, PostgreSQL, Oracle, et MongoDB. Notre équipe est full-stack et maîtrise un large éventail de technologies pour s'adapter à chaque projet.</p>
                     </fieldset>
                     <fieldset>
-                        <legend class="title">
+                        <legend>
                             <ion-icon name="caret-forward-outline"></ion-icon>
                             <h2>Avec quel type d'entreprises travaillez-vous ?</h2>
                         </legend>
                         <p>Nous sommes une agence premium dédiée aux entreprises ambitieuses. Nous accompagnons tous les projets complexes nécessitant une expertise full-stack et une approche orientée résultats.</p>
                     </fieldset>
                     <fieldset>
-                        <legend class="title !mb-0">
+                        <legend class="!mb-0">
                             <ion-icon name="caret-forward-outline"></ion-icon>
                             <h2>Comment se déroule le processus de développement ?</h2>
                         </legend>
@@ -371,7 +433,7 @@
                         <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
-                        <a href="#" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
+                        <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </div>

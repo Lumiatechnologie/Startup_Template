@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>LUMIATECH</title>
 </head>
 <body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
-    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color dark:bg-main-color text-white">
+    <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color text-white">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
     <header class="fixed w-full top-0 left-0 duration-80 z-9999">
@@ -22,10 +30,10 @@
             </a>
             <div id="nav" class="flex items-center tb:justify-between gap-x-9">
                 <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-[71px] max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
-                    <a class="active" href="index.html#home">Accueil</a>
+                    <a href="index.html#home">Accueil</a>
                     <a href="index.html#about">Á propos de nous</a>
                     <a href="index.html#services">Services</a>
-                    <a href="index.html#portfolio">Portfolio</a>
+                    <a class="active" href="index.html#portfolio">Portfolio</a>
                     <a href="index.html#contact">Contact</a>
                     <!-- <div class="sign md:hidden flex items-center w-full justify-between mt-5">
                         <a href="sign-in.html" class="text-nowrap bg-gray-500">Sign In</a>
@@ -36,10 +44,20 @@
                     <a href="sign-in.html" class="text-nowrap">Sign In</a>
                     <a href="sign-up.html" class="text-nowrap bg-main-color text-white py-3 px-8 md:px-9 lg:px-6 font-medium rounded-[3px] hover:contrast-125 duration-125">Sign Up</a>
                 </div> -->
-                <i class="fi fi-rs-brightness translate-y-1 cursor-pointer text-[23px] theme ml-[20px] hover:text-main-color hover:dark:text-main-color"></i>
-                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
             </div>
-            
+            <div class="icons flex-center gap-x-2 tb:gap-x-6">
+                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
+                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <ion-icon name="logo-linkedin"  class=" border-r-1 border-[#ffffffb3] pr-6"></ion-icon>
+                </a>
+                <i class="theme fi fi-rc-moon max-tb:translate-y-1"></i>
+            </div>
         </div>
     </header>
     <main id="portfolio" class="mt-25">
@@ -169,7 +187,7 @@
                         <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
-                        <a href="#" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
+                        <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="mb-3">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </div>

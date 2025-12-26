@@ -50,6 +50,7 @@
                 <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <ion-icon name="logo-linkedin" class="border-r-1 border-[#ffffffb3] pr-6"></ion-icon>
                 </a>
+                <i class="theme fi fi-rc-moon max-tb:translate-y-1"></i>
             </div>
         </div>
     </header>
@@ -63,10 +64,8 @@
                         <ion-icon name="chatbubbles-outline" class="mr-2"></ion-icon>
                         Discutons de votre projet
                     </div>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-                        Contactez notre équipe d'experts
-                    </h1>
+
+                    <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Contactez notre <span class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe d'experts</span></h2>
                     
                     <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                         Prêt à transformer votre vision en réalité digitale ? Notre équipe d'experts vous accompagne dans chaque étape de votre projet technologique.
@@ -141,19 +140,8 @@
                                         </label>
                                         <input type="tel" id="phone" name="phone"
                                                class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
-                                               placeholder="+33 6 12 34 56 78">
+                                               placeholder="+33 666 197 344">
                                     </div>
-                                    <div class="space-y-2">
-                                        <label for="company" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                            Entreprise
-                                        </label>
-                                        <input type="text" id="company" name="company"
-                                               class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
-                                               placeholder="Nom de votre entreprise">
-                                    </div>
-                                </div>
-                                
-                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="space-y-2">
                                         <label for="service" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
                                             Service souhaité <span class="text-red-500">*</span>
@@ -170,20 +158,13 @@
                                             <option value="Autre">Autre</option>
                                         </select>
                                     </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
                                     <div class="space-y-2">
                                         <label for="budget" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
                                             Budget estimé
                                         </label>
-                                        <select id="budget" name="budget"
-                                                class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
-                                            <option value="">Sélectionnez une fourchette</option>
-                                            <option value="Moins de 5 000€">Moins de 5 000€</option>
-                                            <option value="5 000€ - 15 000€">5 000€ - 15 000€</option>
-                                            <option value="15 000€ - 30 000€">15 000€ - 30 000€</option>
-                                            <option value="30 000€ - 50 000€">30 000€ - 50 000€</option>
-                                            <option value="Plus de 50 000€">Plus de 50 000€</option>
-                                            <option value="À discuter">À discuter</option>
-                                        </select>
                                     </div>
                                 </div>
                                 
@@ -195,18 +176,6 @@
                                               class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
                                               placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
                                 </div>
-                                
-                                <div class="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
-                                    <input type="checkbox" id="consent" name="consent" required
-                                           class="mt-1 h-5 w-5 text-main-color focus:ring-main-color border-2 border-gray-300 dark:border-gray-600 rounded"
-                                           aria-describedby="consent-error">
-                                    <label for="consent" class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        J'accepte que mes données soient traitées conformément à la 
-                                        <a href="#" class="text-main-color hover:underline font-medium">politique de confidentialité</a> 
-                                        de LUMIA TECHNOLOGIE. <span class="text-red-500">*</span>
-                                    </label>
-                                </div>
-                                
                                 <button type="submit" 
                                         class="w-full bg-main-color hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                                     <ion-icon name="send-outline" class="mr-3 text-lg"></ion-icon>

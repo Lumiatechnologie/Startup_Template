@@ -25,7 +25,7 @@
     --color-main-bg-color: rgba(74, 109, 247, 0.2);
     --color-secondary-color: #EFBF04;
     --color-secondary-bg-color: rgba(239, 191, 4, 0.2);
-    --color-violet-indigo: #1800ad;
+    --color-violet-indigo: #6a1292;
     --color-main-text: #788293;
     --color-main-text-alt: #959cb1;
     --color-dark-box: #1d232f;
@@ -43,7 +43,7 @@
 }
 
 header nav a {
-    @apply hover:text-main-color duration-100 max-[992px]:py-3 lg:text-[17px]
+    @apply hover:text-violet-indigo duration-100 max-[992px]:py-3 lg:text-[17px] font-medium
 }
 
 header a.active {
@@ -57,7 +57,7 @@ header nav .sign a{
 
 header .theme,
 header ion-icon{
-    @apply cursor-pointer text-[23px] duration-150 hover:text-main-color
+    @apply cursor-pointer text-[23px] duration-150 hover:text-violet-indigo
 }
 
 header ion-icon{
@@ -68,14 +68,56 @@ section, main {
     @apply py-16 md:py-20 tb:py-28 duration-125
 }
 
-#home .mouse .wheel{
-    animation: scroll 1s infinite;
+/* GROW / SHRINK with alternating sizes per corner */
+@keyframes glow-grow {
+    0% {
+        /* blue small, violet big */
+        background-size: 90% 90%, 180% 180%;
+    }
+    50% {
+        /* blue big, violet small */
+        background-size: 180% 180%, 90% 90%;
+    }
+    100% {
+        /* back to blue small, violet big */
+        background-size: 90% 90%, 180% 180%;
+    }
+}
+
+
+/* LIGHT THEME – single blue glow */
+@utility glow-effect {
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 100%;
+    background-size: 180% 180%, 90% 90%;
+    animation: glow-grow 10s linear infinite;
+
+    background-image:
+        radial-gradient(circle at 0% 0%, hsl(221 83% 56% / 0.7) 0, hsl(221 83% 56% / 0) 24%),
+        radial-gradient(circle at 100% 100%, hsl(221 83% 56% / 0.25) 0, hsl(221 83% 56% / 0) 28%);
+    }
+
+/* DARK THEME – blue top-left + violet bottom-right */
+@utility glow-effect-dark {
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 100% 100%;
+    background-size: 180% 180%, 90% 90%;
+    animation: glow-grow 10s linear infinite;
+
+    /* smaller radius so even at max they don't fill the screen */
+    background-image:
+        radial-gradient(circle at 0% 0%, hsl(221 83% 56% / 0.65) 0, hsl(221 83% 56% / 0) 22%),
+        radial-gradient(circle at 100% 100%, hsl(284 78% 32% / 0.65) 0, hsl(284 78% 32% / 0) 22%);
 }
 
 @keyframes scroll{
     0% { transform: translateX(-8.5px); }
     50% { transform: translateX(-5px); }
     100% { transform: translateX(-8.5px); }
+}
+
+#home .mouse .wheel{
+    animation: scroll 1s infinite;
 }
 
 .title {
@@ -151,7 +193,7 @@ section, main {
 
 
 .services .box {
-    @apply w-full bg-transparent dark:bg-dark-alt-color px-8 py-10 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box
+    @apply w-full bg-transparent dark:bg-dark-alt-color px-8 py-10 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box
 }
 
 .services .box .icon {

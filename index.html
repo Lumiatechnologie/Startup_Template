@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <title>LUMIATECH</title>
 </head>
-<body class="relative dark:bg-dark-main-color bg-light-color text-black dark:text-[#ffffffb3] dark duration-150">
+<body class="relative dark:bg-dark-page-color bg-page-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden"></div>
     <div class="to-up fixed right-0 bottom-0 z-9999 flex-center cursor-pointer m-5 py-3 px-3 rounded-md duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box bg-main-color text-white">
         <ion-icon name="chevron-up-outline"></ion-icon>
@@ -29,7 +29,7 @@
                 <img class="logo w-full" src="images/logo/logo.webp" alt="">
             </a>
             <div id="nav" class="flex items-center tb:justify-between gap-x-9">
-                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-[71px] max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
+                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[1200px]:flex-col max-[1200px]:items-start max-[1200px]:absolute max-[1200px]:right-0 max-[1200px]:top-[66px] max-[1200px]:w-[250px] max-[1200px]:px-6 max-[1200px]:rounded max-[1200px]:shadow-md max-[1200px]:dark:bg-dark-page-color max-[1200px]:bg-gray-200 max-[1200px]:hidden max-[1200px]:opacity-0">
                     <a class="active" href="#home">Accueil</a>
                     <a href="#about">Á propos de nous</a>
                     <a href="#services">Services</a>
@@ -46,7 +46,7 @@
                 </div> -->
             </div>
             <div class="icons flex-center gap-x-2 tb:gap-x-6">
-                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"></i>
+                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 tb:translate-y-[1.55px] cursor-pointer burger min-[1200px]:hidden"></i>
                 <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <ion-icon name="logo-facebook"></ion-icon>
                 </a>
@@ -60,23 +60,23 @@
             </div>
         </div>
     </header>
-    <main id="home" class="relative h-[100vh] max-[575px]:!pt-[150px] glow-effect dark:glow-effect-dark">
+    <main id="home" class="relative dark:bg-dark-page-color h-[100vh] max-[575px]:!pt-[150px] glow-effect dark:glow-effect-dark">
         <div class="container flex-center flex-col pb-16 pt-[60px] md:pt-[70px] md:pb-[120px] xl:pt-[140px] xl:pb-[160px] w-full">
             <div class="max-w-[800px] text-center mb-15">
                 <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en <span class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">solutions digitales</span> innovantes</h2>
                 <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
             </div>
-            <a href="#contact" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box bg-gradient-to-r from-blue-500 to-violet-indigo">Contactez-nous</a>
+            <a href="./contact.html" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box bg-gradient-to-r from-blue-500 to-violet-indigo">Contactez-nous</a>
             <div class="mouse w-[40px] h-[25px] border-2 rounded-[50px] rotate-90 mt-15 flex-center">
                 <div class="wheel w-[15px] h-[4px] rounded-[50px] bg-main-color translate-y-[-0.5px]"></div>
             </div>
         </div>
     </main>
-    <section id="about" class="bg-[#f9fafb] dark:bg-[rgba(2,6,23,1)]">
+    <section id="about" class="bg-[#f9fafb] dark:bg-dark-page-color overflow-hidden">
         <div class="container">
-            <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
+            <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 gap-y-10 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
                 <div class="text">
-                    <div class="title tb:!text-left !mb-[40px]">
+                    <div class="title tb:!text-left !mx-0 !mb-[40px]">
                     <h2>Notre Expertise à Votre Service</h2>
                     <p>Description Nous concevons des solutions digitales sur mesure pour les entreprises ambitieuses, allant du web au mobile.</p>
                     </div>
@@ -107,7 +107,7 @@
                                 style="width:25px;height:25px">
                             </lord-icon>
                             </div>
-                            <span>E-commerce</span>
+                            <span>Intelligence Artificielle</span>
                         </li>
                         <li>
                             <div>
@@ -167,14 +167,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="pic max-w-[500px] max-tb:mx-auto">
-                    <img class="about-img-1 max-w-full" src="images/about/about-image-dark.svg" alt="">
-                </div>
+                <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+                <dotlottie-wc class="w-full max-w-2xl scale-120 translate-y-1" src="https://lottie.host/7177dc34-297c-4446-9325-968e251259db/XFGg6DvVbY.lottie" autoplay loop></dotlottie-wc>
             </div>
-            <div class="part-2 flex items-center max-tb:flex-col pt-16 md:pt-20 lg:pt-28">
-                <div class="pic max-w-[500px] mr-50 max-tb:mx-auto max-tb:mb-12">
-                    <img class="about-img-2 max-w-full" src="images/about/about-image-2-dark.svg" alt="">
-                </div>
+            <div class="part-2 flex items-center max-tb:flex-col-reverse gap-y-10 pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-20 tb:pb-28">
+                <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+                <dotlottie-wc class="w-full max-w-3xl scale-150" src="https://lottie.host/ac753452-c47f-4c1c-8971-7a48da770ebe/fkbJTRgS0e.lottie" autoplay loop></dotlottie-wc>
                 <div class="text max-w-[470px]">
                     <fieldset>
                         <legend>
@@ -216,32 +214,87 @@
             </div>
             <div class="services grid gap-y-14 gap-x-8 grid-cols-1 md:grid-cols-2 tb:grid-cols-3 grid-rows-2">
                 <div class="box">
-                    <div class="icon"><ion-icon name="browsers"></ion-icon></div>
+                    <div class="icon">
+                        <script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
+                        <animated-icons
+                        src="https://animatedicons.co/get-icon?name=Blog&style=minimalistic&token=e3e66d2b-9105-4f6e-a6da-567ecb090b2d"
+                        trigger="loop"
+                        attributes='{"variationThumbColour":"#536DFE","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":1.9988888022,"defaultColours":{"group-1":"#274CE3FF","group-2":"#274CE3FF","background":"#FFFFFF00"}}'
+                        height="60"
+                        width="60"
+                        class="translate-x-[3px]"
+                        ></animated-icons>
+                    </div>
                     <h3>Développement Web</h3>
                     <p>Création de sites vitrines, plateformes corporate, institutionnelles, et applications web complexes sur mesure.</p>
                 </div>
                 <div class="box">
-                    <div class="icon"><ion-icon name="bag-check"></ion-icon></div>
-                    <h3>E-commerce</h3>
-                    <p>Conception de boutiques e-commerce assurant des paiements sécurisés, multilinguisme, et optimisation de la conversion pour une expérience client maximale.</p>
+                    <div class="icon">
+                        <script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
+                        <animated-icons
+                        src="https://animatedicons.co/get-icon?name=Chatbot&style=minimalistic&token=6b3aba1e-cf81-46d6-8923-cca76667c70d"
+                        trigger="loop"
+                        attributes='{"variationThumbColour":"#536DFE","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":1.94,"defaultColours":{"group-1":"#274CE3FF","group-2":"#274CE3FF","background":"#FFFFFF00"}}'
+                        height="55"
+                        width="55"
+                        ></animated-icons>
+                    </div>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Implémentation et intégration de solutions intelligentes pour automatiser vos processus, optimiser vos données et offrir des expériences prédictives sur mesure.</p>
                 </div>
                 <div class="box">
-                    <div class="icon"><ion-icon name="apps"></ion-icon></div>
+                    <div class="icon">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/dutqakce.json"
+                            trigger="loop"
+                            delay="300"
+                            colors="primary:#274ce3"
+                            style="width:70px;height:70px">
+                        </lord-icon>
+                    </div>
                     <h3>Développement d'Applications Mobiles</h3>
                     <p>Conception et réalisation d'applications performantes, élégantes, et fluides sur les systèmes iOS et Android.</p>
                 </div>
                 <div class="box">
-                    <div class="icon"><ion-icon name="code-slash"></ion-icon></div>
+                    <div class="icon">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/lrubprlz.json"
+                            trigger="loop"
+                            delay="300"
+                            colors="primary:#274ce3"
+                            style="width:70px;height:70px">
+                        </lord-icon>
+                    </div>
                     <h3>Backend & Architecture API</h3>
                     <p>Mise en place de systèmes de Microservices, d'API, et de sécurité avancée pour garantir des plateformes robustes et évolutives.</p>
                 </div>
                 <div class="box">
-                    <div class="icon"><ion-icon name="bar-chart"></ion-icon></div>
+                    <div class="icon">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/kwnsnjyg.json"
+                            trigger="loop"
+                            delay="300"
+                            colors="primary:#274ce3"
+                            style="width:70px;height:70px">
+                        </lord-icon>
+                    </div>
                     <h3>Solutions Métier Sur Mesure</h3>
                     <p>Développement de logiciels dédiés (CRM, ERP, gestion RH, dashboards) pour optimiser vos processus internes et votre productivité.</p>
                 </div>
                 <div class="box">
-                    <div class="icon"><ion-icon name="trending-up"></ion-icon></div>
+                    <div class="icon">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/erxuunyq.json"
+                            trigger="loop"
+                            delay="400"
+                            colors="primary:#274ce3"
+                            style="width:70px;height:70px">
+                        </lord-icon>
+                    </div>
                     <h3>Conseil & Stratégie Digitale</h3>
                     <p>Audit, modernisation, et accompagnement stratégique pour l'optimisation de vos systèmes et la réussite de votre transformation digitale.</p>
                 </div>
@@ -420,13 +473,13 @@
             </div>
         </div>
     </section>
-    <footer class="bg-white dark:bg-dark-box">
+    <footer>
         <div class="container">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-10 sm:gap-y-15 py-15 tb:pt-25">
                 <div class="social lg:w-5/12">
                     <img src="images/logo/logo.webp" alt="" class="logo w-[350px]">
                     <p class="max-w-[360px] mb-8">Votre partenaire de confiance pour des créations digitales innovantes et sur mesure. Transformons ensemble vos idées en réalité.</p>
-                    <div class="flex items-center gap-x-6">
+                    <div class="flex items-center gap-x-5">
                         <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
@@ -461,7 +514,7 @@
             <div class="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent"></div>
             <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
                 <div class="flex">
-                    <a href="https://lumiatechnologie.com/">© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</a>
+                    <p>© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</p>
                 </div>
             </div>
         </div>

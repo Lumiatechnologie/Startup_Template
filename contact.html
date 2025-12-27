@@ -31,7 +31,7 @@
                 <img class="logo w-full" src="images/logo/logo.webp" alt="LUMIA TECHNOLOGIE">
             </a>
             <div id="nav" class="flex items-center tb:justify-between gap-x-9">
-                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[992px]:flex-col max-[992px]:items-start max-[992px]:absolute max-[992px]:right-0 max-[992px]:top-[71px] max-[992px]:w-[250px] max-[992px]:px-6 max-[992px]:rounded max-[992px]:shadow-md max-[992px]:dark:bg-dark-main-color max-[992px]:bg-gray-200 max-[992px]:hidden max-[992px]:opacity-0">
+                <nav class="z-999 flex items-center space-x-12 py-4 duration-150 max-[1200px]:flex-col max-[1200px]:items-start max-[1200px]:absolute max-[1200px]:right-0 max-[1200px]:top-[71px] max-[1200px]:w-[250px] max-[1200px]:px-6 max-[1200px]:rounded max-[1200px]:shadow-md max-[1200px]:dark:bg-dark-main-color max-[1200px]:bg-gray-200 max-[1200px]:hidden max-[1200px]:opacity-0">
                     <a href="index.html#home">Accueil</a>
                     <a href="index.html#about">À propos de nous</a>
                     <a href="index.html#services">Services</a>
@@ -40,7 +40,7 @@
                 </nav>
             </div>
             <div class="icons flex-center gap-x-2 tb:gap-x-6">
-                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden" role="button" aria-label="Menu mobile"></i>
+                <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[1200px]:hidden" role="button" aria-label="Menu mobile"></i>
                 <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <ion-icon name="logo-facebook"></ion-icon>
                 </a>
@@ -56,7 +56,7 @@
     </header>
 
     <!-- Hero Section -->
-    <main class="pt-24 relative min-h-screen max-[575px]:!pt-[150px] bg-gradient-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <main class="!p-0 !pt-24 relative min-h-screen max-[575px]:!pt-[150px] bg-gradient-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <section class="container flex-center flex-col pb-12 pt-16 md:pt-20 md:pb-20 xl:pt-24 xl:pb-24 w-full">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
@@ -96,18 +96,18 @@
                                             Nom complet <span class="text-red-500">*</span>
                                         </label>
                                         <input type="text" id="name" name="name" required
-                                               class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
-                                               placeholder="Votre nom complet"
-                                               aria-describedby="name-error">
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="Votre nom complet"
+                                            aria-describedby="name-error">
                                     </div>
                                     <div class="space-y-2">
                                         <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
                                             Adresse e-mail <span class="text-red-500">*</span>
                                         </label>
                                         <input type="email" id="email" name="email" required
-                                               class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
-                                               placeholder="votre@email.com"
-                                               aria-describedby="email-error">
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="votre@email.com"
+                                            aria-describedby="email-error">
                                     </div>
                                 </div>
                                 
@@ -117,8 +117,8 @@
                                             Téléphone
                                         </label>
                                         <input type="tel" id="phone" name="phone"
-                                               class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
-                                               placeholder="+33 666 197 344">
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            placeholder="+33 666 197 344">
                                     </div>
                                     <div class="space-y-2">
                                         <label for="service" class="block text-sm font-semibold text-gray-700 dark:text-gray-300">
@@ -151,8 +151,8 @@
                                         Décrivez votre projet <span class="text-red-500">*</span>
                                     </label>
                                     <textarea id="message" name="message" rows="5" required
-                                              class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
-                                              placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
+                                            placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
                                 </div>
                                 <button type="submit" 
                                         class="w-full bg-main-color hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
@@ -219,16 +219,16 @@
                                 Suivez-nous
                             </h3>
                             <div class="grid grid-cols-3 gap-4 mb-6">
-                                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" 
-                                   class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
                                     <ion-icon name="logo-facebook" class="text-xl"></ion-icon>
                                 </a>
-                                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" 
-                                   class="bg-pink-600 hover:bg-pink-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                    class="bg-pink-600 hover:bg-pink-700 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
                                     <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
                                 </a>
-                                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" 
-                                   class="bg-blue-700 hover:bg-blue-800 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
+                                <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                                    class="bg-blue-700 hover:bg-blue-800 text-white p-4 rounded-xl transition-all duration-200 flex items-center justify-center group">
                                     <ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
                                 </a>
                             </div>
@@ -372,7 +372,7 @@
         </div>
     </footer>
 
-    <script src="JS/script.js"></script>
+    <script src="JS/alt script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

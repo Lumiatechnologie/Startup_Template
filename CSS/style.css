@@ -15,9 +15,9 @@
 }
 
 @theme {
-    --color-light-color: #efefef;
-    --color-light-alt-color: #eff2f9;
-    --color-dark-main-color: #121723;
+    --color-page-color: #efefef;
+    --color-page-alt-color: #eff2f9;
+    --color-dark-page-color: #121723;
     --color-dark-alt-color: #181c28;
     --color-header-overlay: rgba(63, 62, 62, 0.336);
     --color-overlay: rgba(10, 14, 29, 0.7);
@@ -42,8 +42,28 @@
     align-items: center;
 }
 
+.title {
+    @apply text-center max-w-[570px] mx-auto mb-[100px]
+}
+
+.title h2 {
+    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] !leading-tight font-bold
+}
+
+.title p {
+    @apply text-main-text !leading-relaxed md:text-lg
+}
+
+.box {
+    @apply dark:bg-dark-box
+}
+
+.box p {
+    @apply text-main-text mt-5 leading-relaxed pr-[10px]
+}
+
 header nav a {
-    @apply hover:text-violet-indigo duration-100 max-[992px]:py-3 lg:text-[17px] font-medium
+    @apply hover:text-violet-indigo duration-100 max-[1200px]:py-3 lg:text-[17px] font-medium
 }
 
 header a.active {
@@ -60,7 +80,7 @@ header ion-icon{
     @apply cursor-pointer text-[23px] duration-150 hover:text-violet-indigo
 }
 
-header ion-icon{
+header .icons ion-icon{
     @apply hidden tb:inline-block
 }
 
@@ -93,8 +113,8 @@ section, main {
     animation: glow-grow 10s linear infinite;
 
     background-image:
-        radial-gradient(circle at 0% 0%, hsl(221 83% 56% / 0.7) 0, hsl(221 83% 56% / 0) 24%),
-        radial-gradient(circle at 100% 100%, hsl(221 83% 56% / 0.25) 0, hsl(221 83% 56% / 0) 28%);
+        radial-gradient(circle at 0% 0%, hsl(221 83% 56% / 0.65) 0, hsl(221 83% 56% / 0) 22%),
+        radial-gradient(circle at 100% 100%, hsl(284 78% 32% / 0.65) 0, hsl(284 78% 32% / 0) 22%);
     }
 
 /* DARK THEME – blue top-left + violet bottom-right */
@@ -120,26 +140,6 @@ section, main {
     animation: scroll 1s infinite;
 }
 
-.title {
-    @apply text-center max-w-[570px] mx-auto mb-[100px]
-}
-
-.title h2 {
-    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] !leading-tight font-bold
-}
-
-.title p {
-    @apply text-main-text !leading-relaxed md:text-lg
-}
-
-.box {
-    @apply dark:bg-dark-box
-}
-
-.box p {
-    @apply text-main-text mt-5 leading-relaxed pr-[10px]
-}
-
 #about .part-1 .checklist li {
     @apply flex items-center space-x-4
 }
@@ -150,6 +150,10 @@ section, main {
 
 #about .part-1 .checklist li lord-icon {
     @apply translate-y-[-1px] text-[22px]
+}
+
+#about .part-1 .checklist li span{
+    @apply translate-y-[1px]
 }
 
 #about .part-2 fieldset {
@@ -305,7 +309,7 @@ section, main {
 }
 
 #portfolio .box .pic a{
-    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-light-alt-color dark:from-dark-box via-light-alt-color/70 dark:via-dark-main-color/70 to-transparent opacity-0 duration-500
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-page-alt-color dark:from-dark-box via-page-alt-color/70 dark:via-dark-page-color/70 to-transparent opacity-0 duration-500
 }
 
 #portfolio .box:hover .pic a{
@@ -376,7 +380,7 @@ footer h4{
 }
 
 footer a{
-    @apply block duration-125 hover:text-main-color
+    @apply block duration-125 hover:text-violet-indigo
 }
 
 footer a:not(:last-of-type){
@@ -385,20 +389,16 @@ footer a:not(:last-of-type){
 
 footer .social ion-icon,
 footer .social i{
-    @apply text-[20px] hover:text-main-color cursor-pointer duration-125
+    @apply text-[25px] hover:text-violet-indigo cursor-pointer duration-125
 }
 
 footer .links{
     @apply lg:w-2/12
 }
 
-footer .credits a{
+/* footer .credits p{
     @apply m-0 font-bold text-black dark:text-white hover:text-main-color
-}
-
-footer .credits div{
-    @apply gap-[4px]
-}
+} */
 
 /* .sign .alt-log a,
 .sign a.submit{

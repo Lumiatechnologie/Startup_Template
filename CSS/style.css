@@ -302,15 +302,7 @@ section, main {
 }
 
 #clients .box .profile span {
-    @apply text-sm text-[#788293]
-}
-
-.sub-type span {
-    @apply font-bold dark:text-white
-}
-
-.sub-type span.active {
-    @apply text-main-color
+    @apply text-sm text-main-text
 }
 
 #portfolio .box {

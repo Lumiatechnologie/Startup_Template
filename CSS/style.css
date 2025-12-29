@@ -35,15 +35,15 @@
 }
 
 .title {
-    @apply text-center max-w-[570px] mx-auto mb-[100px]
+    @apply text-center max-w-[570px] mx-auto mb-25
 }
 
 .title h2 {
-    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] !leading-tight font-bold
+    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] leading-tight! font-bold
 }
 
 .title p {
-    @apply text-main-text !leading-relaxed md:text-lg
+    @apply text-main-text leading-relaxed! md:text-lg
 }
 
 .box {
@@ -141,11 +141,11 @@ section, main {
 }
 
 #about .part-1 .checklist li lord-icon {
-    @apply translate-y-[-1px] text-[22px]
+    @apply -translate-y-[22px]
 }
 
 #about .part-1 .checklist li span{
-    @apply translate-y-[1px]
+    @apply translate-y-px
 }
 
 #about .part-2 fieldset {
@@ -193,7 +193,7 @@ section, main {
 }
 
 .services .box .icon {
-    @apply flex-center text-main-color bg-main-bg-color text-5xl rounded-[6px] w-[70px] h-[70px] py-[12px] px-[10px]
+    @apply flex-center text-main-color bg-main-bg-color text-5xl rounded-md w-[70px] h-[70px] py-[12px] px-[10px]
 }
 
 .services .box ion-icon {
@@ -233,7 +233,7 @@ section, main {
 }
 
 .services .box ul {
-    @apply pt-9 border-t-1 dark:border-gray-700 border-gray-300 space-y-3
+    @apply pt-9 border-t dark:border-gray-700 border-gray-300 space-y-3
 }
 
 .services .box ul li {
@@ -268,12 +268,12 @@ section, main {
 }
 
 #clients .scroll-list:before{
-    @apply left-0 translate-x-[-1px];
+    @apply left-0 -translate-x-px;
     background: linear-gradient(to right, white, transparent);
 }
 
 #clients .scroll-list:after{
-    @apply right-0 translate-x-[1px];
+    @apply right-0 translate-x-px;
     background: linear-gradient(to left, white, transparent);
 }
 
@@ -322,11 +322,11 @@ section, main {
 }
 
 #portfolio .box .pic span {
-    @apply absolute top-0 left-0 translate-x-[23px] translate-y-[23px] font-bold text-main-color text-sm bg-main-bg-color border-1 border-main-color rounded-[50px] px-4 py-2
+    @apply absolute top-0 left-0 translate-x-[23px] translate-y-[23px] font-bold text-main-color text-sm bg-main-bg-color border border-main-color rounded-[50px] px-4 py-2
 }
 
 #portfolio .box .pic a{
-    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-page-alt-color dark:from-dark-box via-page-alt-color/70 dark:via-dark-page-color/70 to-transparent opacity-0 duration-500
+    @apply absolute top-0 left-0 w-full h-full bg-linear-to-t from-page-alt-color dark:from-dark-box via-page-alt-color/70 dark:via-dark-page-color/70 to-transparent opacity-0 duration-500
 }
 
 #portfolio .box:hover .pic a{
@@ -334,7 +334,7 @@ section, main {
 }
 
 #portfolio .box .pic ion-icon{
-    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] duration-300 opacity-0 text-[30px] text-main-color text-sm bg-main-bg-color border-1 border-main-color rounded-[50%] p-4
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] duration-300 opacity-0 text-[30px] text-main-color text-sm bg-main-bg-color border border-main-color rounded-[50%] p-4
 }
 
 #portfolio .box:hover .pic ion-icon{
@@ -346,7 +346,7 @@ section, main {
 }
 
 #portfolio .box .techs span{
-    @apply uppercase text-center text-[11px] font-bold text-main-color bg-main-bg-color border-1 border-main-color rounded-[50px] px-3 py-1
+    @apply uppercase text-center text-[11px] font-bold text-main-color bg-main-bg-color border border-main-color rounded-[50px] px-3 py-1
 }
 
 #portfolio .box h4{

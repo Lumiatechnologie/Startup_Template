@@ -141,7 +141,7 @@ section, main {
 }
 
 #about .part-1 .checklist li lord-icon {
-    @apply -translate-y-[22px]
+    @apply -translate-y-[2px]
 }
 
 #about .part-1 .checklist li span{
@@ -262,27 +262,16 @@ section, main {
     }
 }
 
-#clients .scroll-list:before,
-#clients .scroll-list:after{
-    @apply absolute content-[""] top-0 w-8 sm:w-20 h-full z-10;
+#clients dotlottie-wc{
+    @apply absolute w-[390px] h-[400px] sm:h-[500px] z-10;
 }
 
-#clients .scroll-list:before{
-    @apply left-0 -translate-x-px;
-    background: linear-gradient(to right, white, transparent);
+#clients dotlottie-wc:first-of-type{
+    @apply left-0 rotate-270 -translate-x-[170px];
 }
 
-#clients .scroll-list:after{
-    @apply right-0 translate-x-px;
-    background: linear-gradient(to left, white, transparent);
-}
-
-.dark #clients .scroll-list:before {
-    background: linear-gradient(to right, #181c28, transparent);
-}
-
-.dark #clients .scroll-list:after {
-    background: linear-gradient(to left, #181c28, transparent);
+#clients dotlottie-wc:last-of-type{
+    @apply right-0 rotate-90 translate-x-[170px];
 }
 
 #clients .box {

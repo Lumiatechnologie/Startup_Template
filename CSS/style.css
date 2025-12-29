@@ -110,7 +110,7 @@ section, main {
     }
 
 /* DARK THEME – blue top-left + violet bottom-right */
-@utility glow-effect-dark {
+@utility glow-effect-dark{
     background-repeat: no-repeat;
     background-position: 0% 0%, 100% 100%;
     background-size: 180% 180%, 90% 90%;

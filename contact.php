@@ -62,10 +62,11 @@ function validateContactData($data) {
     
     // Validation du service
     $allowedServices = ['UX/UI Design', 'Développement Web', 'Applications Mobiles', 'E-commerce', 'Conseil & Stratégie', 'Formation', 'Autre'];
-    if (empty($data['service'])) {
+    $service = isset($data['service']) ? trim($data['service']) : '';
+    if ($service === '') {
         $errors['service'] = "Veuillez sélectionner un service";
-    } elseif (!in_array($data['service'], $allowedServices)) {
-        $errors['service'] = "Service invalide";
+    } elseif (!in_array($service, $allowedServices, true)) {
+    $errors['service'] = "Service invalide";
     }
     
     // Validation du message

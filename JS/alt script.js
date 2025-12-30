@@ -11,21 +11,26 @@ let check_icon = document.querySelector(".checkbox ion-icon") // check icon
 
 // Initialize theme from localStorage
 if (localStorage.theme == "light") {
-    document.body.classList.remove("dark") // set light mode
-    pic_theme() // update logos
+    document.body.classList.remove("dark")
+    pic_theme()
+    theme_btn.classList.remove("fi-rc-moon")
+    theme_btn.classList.add("fi-rs-brightness")
 } else {
-    document.body.classList.add("dark") // set dark mode
+    document.body.classList.add("dark")
+    pic_theme()
+    theme_btn.classList.add("fi-rc-moon")
+    theme_btn.classList.remove("fi-rs-brightness")
 }
 
 // Update logos based on theme
 function pic_theme() {
-    if (!document.body.classList.contains("dark")) {
+    if (document.body.classList.contains("dark")) {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo-alt.webp" // light logo
+            logo.src = "images/logo/logo.webp" // light logo
         })
     } else {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo.webp" // dark logo
+            logo.src = "images/logo/logo-alt.webp" // dark logo
         })
     }
 }
@@ -36,10 +41,10 @@ theme_btn.addEventListener("click", () => {
     theme_btn.classList.toggle("fi-rc-moon") // toggle icon class
     theme_btn.classList.toggle("fi-rs-brightness") // toggle icon class
     pic_theme() // update logos
-    if (!document.body.classList.contains("dark")) {
-        localStorage.theme = "light" // persist choice
-    } else {
+    if (document.body.classList.contains("dark")) {
         localStorage.theme = "dark" // persist choice
+    } else {
+        localStorage.theme = "light" // persist choice
     }
 })
 
@@ -47,28 +52,31 @@ theme_btn.addEventListener("click", () => {
 nav_ele.forEach(ele => {
     ele.addEventListener("click", () => {
         nav_ele.forEach(a => {
-            a.classList.remove("active") // clear others
+            a.classList.remove("active")
         })
-        ele.classList.add("active") // mark clicked
+        ele.classList.add("active")
+        side_menu_toggle()
     })
 })
 
-// Open/close side menu (mobile)
-side_menu_btn.addEventListener("click", () => {
-    if (side_menu.classList.contains("max-[992px]:hidden")) {
-        side_menu.classList.toggle("max-[992px]:hidden") // show menu
+// open/close side menu (mobile)
+side_menu_btn.addEventListener("click", side_menu_toggle)
+
+function side_menu_toggle() {
+    if (side_menu.classList.contains("max-[1200px]:hidden")) {
+        side_menu.classList.toggle("max-[1200px]:hidden")
         setTimeout(() => {
-            side_menu.classList.toggle("max-[992px]:opacity-0") // fade in
-            side_menu.classList.toggle("max-[992px]:opacity-100")
+            side_menu.classList.toggle("max-[1200px]:opacity-0")
+            side_menu.classList.toggle("max-[1200px]:opacity-100")
         }, 150);
     } else {
-        side_menu.classList.toggle("max-[992px]:opacity-0") // fade out
-        side_menu.classList.toggle("max-[992px]:opacity-100")
+        side_menu.classList.toggle("max-[1200px]:opacity-0")
+        side_menu.classList.toggle("max-[1200px]:opacity-100")
         setTimeout(() => {
-            side_menu.classList.toggle("max-[992px]:hidden") // hide menu
+            side_menu.classList.toggle("max-[1200px]:hidden")
         }, 150);
     }
-})
+}
 
 // Header style change on scroll
 function HeaderEffect() {

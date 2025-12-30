@@ -56,10 +56,10 @@ theme_btn.addEventListener("click", () => {
     theme_btn.classList.toggle("fi-rc-moon")
     theme_btn.classList.toggle("fi-rs-brightness")
     pic_theme()
-    if (!document.body.classList.contains("dark")) {
-        localStorage.theme = "light"
-    } else {
+    if (document.body.classList.contains("dark")) {
         localStorage.theme = "dark"
+    } else {
+        localStorage.theme = "light"
     }
 })
 

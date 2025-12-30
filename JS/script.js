@@ -7,9 +7,11 @@ let header = document.querySelector("header") // page header
 let header_container = document.querySelector("header div") // header inner container
 let nav_ele = document.querySelectorAll("nav a") // nav links
 let up_btn = document.querySelector(".to-up") // scroll to top button
+let about_p2_text = document.querySelectorAll('#about .part-2 .text')
 let fieldsets = document.querySelectorAll('#about fieldset')
 let legends = document.querySelectorAll('#about legend')
 let overlay = document.querySelector(".overlay") // page overlay
+let waves = document.querySelectorAll("#clients dotlottie-wc")
 
 // Initialize theme from localStorage
 if (localStorage.theme == "light") {
@@ -26,13 +28,19 @@ if (localStorage.theme == "light") {
 
 // Update logo based on theme
 function pic_theme() {
-    if (!document.body.classList.contains("dark")) {
+    if (document.body.classList.contains("dark")) {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo-alt.webp"
+            logo.src = "images/logo/logo.webp"
+        })
+        waves.forEach(wave => {
+            wave.setAttribute("src", "https://lottie.host/8cf09fbc-1262-4ef5-984f-05ea9271e402/td2r9myQJW.lottie")
         })
     } else {
         logo.forEach(logo => {
-            logo.src = "images/logo/logo.webp"
+            logo.src = "images/logo/logo-alt.webp"
+        })
+        waves.forEach(wave => {
+            wave.setAttribute("src", "https://lottie.host/9b0c232b-0ac6-450c-99d4-eb6f52540074/BVKA5TUFwq.lottie")
         })
     }
 }
@@ -101,11 +109,9 @@ function HeaderEffect() {
 window.addEventListener('scroll', HeaderEffect)
 
 // Toggle accordion for about section Q&A
-legends.forEach(legend => {
+fieldsets.forEach(fieldset => {
     // Add click event listener to each legend element
-    legend.addEventListener('click', () => {
-        // Find the closest fieldset parent and toggle the 'open' class
-        const fieldset = legend.closest('fieldset');
+    fieldset.addEventListener('click', () => {
         fieldset.classList.toggle('open');
         fieldset.classList.toggle('active');
 

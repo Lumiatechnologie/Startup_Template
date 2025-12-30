@@ -35,15 +35,15 @@
 }
 
 .title {
-    @apply text-center max-w-[570px] mx-auto mb-[100px]
+    @apply text-center max-w-[570px] mx-auto mb-25
 }
 
 .title h2 {
-    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] !leading-tight font-bold
+    @apply mb-4 dark:text-white text-3xl sm:text-4xl md:text-[45px] leading-tight! font-bold
 }
 
 .title p {
-    @apply text-main-text !leading-relaxed md:text-lg
+    @apply text-main-text leading-relaxed! md:text-lg
 }
 
 .box {
@@ -110,7 +110,7 @@ section, main {
     }
 
 /* DARK THEME – blue top-left + violet bottom-right */
-@utility glow-effect-dark {
+@utility glow-effect-dark{
     background-repeat: no-repeat;
     background-position: 0% 0%, 100% 100%;
     background-size: 180% 180%, 90% 90%;
@@ -122,14 +122,14 @@ section, main {
         radial-gradient(circle at 100% 100%, hsl(284 78% 32% / 0.65) 0, hsl(284 78% 32% / 0) 22%);
 }
 
-@keyframes scroll{
-    0% { transform: translateX(-8.5px); }
-    50% { transform: translateX(-5px); }
-    100% { transform: translateX(-8.5px); }
+@keyframes scroll-wheel{
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(-8px); }
+    100% { transform: translateX(-5px); }
 }
 
 #home .mouse .wheel{
-    animation: scroll 1s infinite;
+    animation: scroll-wheel 1s infinite;
 }
 
 #about .part-1 .checklist li {
@@ -141,11 +141,11 @@ section, main {
 }
 
 #about .part-1 .checklist li lord-icon {
-    @apply translate-y-[-1px] text-[22px]
+    @apply -translate-y-[2px]
 }
 
 #about .part-1 .checklist li span{
-    @apply translate-y-[1px]
+    @apply translate-y-px
 }
 
 #about .part-2 fieldset {
@@ -193,7 +193,7 @@ section, main {
 }
 
 .services .box .icon {
-    @apply flex-center text-main-color bg-main-bg-color text-5xl rounded-[6px] w-[70px] h-[70px] py-[12px] px-[10px]
+    @apply flex-center text-main-color bg-main-bg-color text-5xl rounded-md w-[70px] h-[70px] py-[12px] px-[10px]
 }
 
 .services .box ion-icon {
@@ -233,7 +233,7 @@ section, main {
 }
 
 .services .box ul {
-    @apply pt-9 border-t-1 dark:border-gray-700 border-gray-300 space-y-3
+    @apply pt-9 border-t dark:border-gray-700 border-gray-300 space-y-3
 }
 
 .services .box ul li {
@@ -249,44 +249,33 @@ section, main {
 }
 
 #clients .scroll-list .list{
-    animation: scroll 30s linear infinite;
+    animation: slides 30s linear infinite;
 }
 
 #clients .scroll-list:hover .list {
     animation-play-state: paused;
 }
 
-@keyframes scroll {
+@keyframes slides {
     to {
         transform: translateX(calc(-100% - 32px));
     }
 }
 
-#clients .scroll-list:before,
-#clients .scroll-list:after{
-    @apply absolute content-[""] top-0 w-16 h-full z-10;
+#clients dotlottie-wc{
+    @apply absolute w-[390px] h-[400px] sm:h-[500px] z-10;
 }
 
-#clients .scroll-list:before{
-    @apply left-0;
-    background: linear-gradient(to right, white, transparent);
+#clients dotlottie-wc:first-of-type{
+    @apply left-0 rotate-270 -translate-x-[170px];
 }
 
-#clients .scroll-list:after{
-    @apply right-0;
-    background: linear-gradient(to left, white, transparent);
-}
-
-.dark #clients .scroll-list:before {
-    background: linear-gradient(to right, #181c28, transparent);
-}
-
-.dark #clients .scroll-list:after {
-    background: linear-gradient(to left, #181c28, transparent);
+#clients dotlottie-wc:last-of-type{
+    @apply right-0 rotate-90 translate-x-[170px];
 }
 
 #clients .box {
-    @apply bg-white dark:bg-[#1d2430] h-[380px] flex flex-col shrink-0 justify-between p-8 lg:px-5 xl:p-8 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box z-1
+    @apply bg-white dark:bg-[#1d2430] h-[380px] flex flex-col shrink-0 justify-between p-8 lg:px-5 xl:p-8 rounded-sm duration-200 shadow-box-shadow hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box
 }
 
 #clients .box p {
@@ -322,11 +311,11 @@ section, main {
 }
 
 #portfolio .box .pic span {
-    @apply absolute top-0 left-0 translate-x-[23px] translate-y-[23px] font-bold text-main-color text-sm bg-main-bg-color border-1 border-main-color rounded-[50px] px-4 py-2
+    @apply absolute top-0 left-0 translate-x-[23px] translate-y-[23px] font-bold text-main-color text-sm bg-main-bg-color border border-main-color rounded-[50px] px-4 py-2
 }
 
 #portfolio .box .pic a{
-    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-t from-page-alt-color dark:from-dark-box via-page-alt-color/70 dark:via-dark-page-color/70 to-transparent opacity-0 duration-500
+    @apply absolute top-0 left-0 w-full h-full bg-linear-to-t from-page-alt-color dark:from-dark-box via-page-alt-color/70 dark:via-dark-page-color/70 to-transparent opacity-0 duration-500
 }
 
 #portfolio .box:hover .pic a{
@@ -334,7 +323,7 @@ section, main {
 }
 
 #portfolio .box .pic ion-icon{
-    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] duration-300 opacity-0 text-[30px] text-main-color text-sm bg-main-bg-color border-1 border-main-color rounded-[50%] p-4
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[20%] duration-300 opacity-0 text-[30px] text-main-color text-sm bg-main-bg-color border border-main-color rounded-[50%] p-4
 }
 
 #portfolio .box:hover .pic ion-icon{
@@ -346,7 +335,7 @@ section, main {
 }
 
 #portfolio .box .techs span{
-    @apply uppercase text-center text-[11px] font-bold text-main-color bg-main-bg-color border-1 border-main-color rounded-[50px] px-3 py-1
+    @apply uppercase text-center text-[11px] font-bold text-main-color bg-main-bg-color border border-main-color rounded-[50px] px-3 py-1
 }
 
 #portfolio .box h4{

@@ -54,29 +54,29 @@
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
                 <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <ion-icon name="logo-linkedin"  class=" border-r-1 border-[#ffffffb3] pr-6"></ion-icon>
+                    <ion-icon name="logo-linkedin"  class=" border-r border-[#ffffffb3] pr-6"></ion-icon>
                 </a>
                 <i class="theme fi fi-rc-moon max-tb:translate-y-1"></i>
             </div>
         </div>
     </header>
-    <main id="home" class="relative dark:bg-dark-page-color h-[100vh] max-[575px]:!pt-[150px] glow-effect dark:glow-effect-dark">
+    <main id="home" class="relative dark:bg-dark-page-color h-screen max-[575px]:!pt-[150px] glow-effect dark:glow-effect-dark">
         <div class="container flex-center flex-col pb-16 pt-[60px] md:pt-[70px] md:pb-[120px] xl:pt-[140px] xl:pb-[160px] w-full">
             <div class="max-w-[800px] text-center mb-15">
-                <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">Transformez vos idées en <span class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">solutions digitales</span> innovantes</h2>
+                <h2 class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight!">Transformez vos idées en <span class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">solutions digitales</span> innovantes</h2>
                 <p class="dark:text-color-alt sm:text-lg md:text-xl leading-relaxed">LUMIA TECHNOLOGIE Votre partenaire pour des créations digitales innovantes et sur mesure</p>
             </div>
-            <a href="./contact.html" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box bg-gradient-to-r from-blue-500 to-violet-indigo">Contactez-nous</a>
+            <a href="./contact.html" class="px-8 py-4 rounded-sm font-bold text-white duration-200 hover:shadow-dark-hover-box bg-linear-to-r from-blue-500 to-violet-indigo">Contactez-nous</a>
             <div class="mouse w-[40px] h-[25px] border-2 rounded-[50px] rotate-90 mt-15 flex-center">
-                <div class="wheel w-[15px] h-[4px] rounded-[50px] bg-main-color translate-y-[-0.5px]"></div>
+                <div class="wheel w-[15px] h-1 rounded-[50px] bg-main-color translate-y-[-0.3px]"></div>
             </div>
         </div>
     </main>
     <section id="about" class="bg-[#f9fafb] dark:bg-dark-page-color overflow-hidden">
         <div class="container">
-            <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 gap-y-10 pt-50 border-b-1 dark:border-white/[.15] border-gray-300 pb-16 md:pb-20 lg:pb-28">
+            <div class="part-1 flex justify-between items-center max-tb:flex-col gap-14 gap-y-10 pt-50 border-b dark:border-white/15 border-gray-300 pb-16 md:pb-20 lg:pb-28">
                 <div class="text">
-                    <div class="title tb:!text-left !mx-0 !mb-[40px]">
+                    <div class="title tb:text-left! mx-0! mb-10!">
                     <h2>Notre Expertise à Votre Service</h2>
                     <p>Description Nous concevons des solutions digitales sur mesure pour les entreprises ambitieuses, allant du web au mobile.</p>
                     </div>
@@ -167,13 +167,11 @@
                         </li>
                     </ul>
                 </div>
-                <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
                 <dotlottie-wc class="w-full max-w-2xl scale-120 translate-y-1" src="https://lottie.host/7177dc34-297c-4446-9325-968e251259db/XFGg6DvVbY.lottie" autoplay loop></dotlottie-wc>
             </div>
-            <div class="part-2 flex items-center max-tb:flex-col-reverse gap-y-10 pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-20 tb:pb-28">
-                <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+            <div class="part-2 flex items-center flex-col-reverse tb:flex-row gap-y-10 pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-20 tb:pb-28">
                 <dotlottie-wc class="w-full max-w-3xl scale-150" src="https://lottie.host/ac753452-c47f-4c1c-8971-7a48da770ebe/fkbJTRgS0e.lottie" autoplay loop></dotlottie-wc>
-                <div class="text max-w-[470px]">
+                <div class="text max-w-[470px] z-10 tb:h-[525px] flex-center flex-col">
                     <fieldset>
                         <legend>
                             <ion-icon name="caret-forward-outline"></ion-icon>
@@ -196,7 +194,7 @@
                         <p>Nous sommes une agence premium dédiée aux entreprises ambitieuses. Nous accompagnons tous les projets complexes nécessitant une expertise full-stack et une approche orientée résultats.</p>
                     </fieldset>
                     <fieldset>
-                        <legend class="!mb-0">
+                        <legend class="mb-0!">
                             <ion-icon name="caret-forward-outline"></ion-icon>
                             <h2>Comment se déroule le processus de développement ?</h2>
                         </legend>
@@ -303,11 +301,13 @@
     </section>
     <section id="clients" class="dark:bg-dark-alt-color bg-white relative">
         <div class="container">
-            <img class="w-[250px] absolute bottom-0 left-0 opacity-30" src="images/wavy-lines.png" alt="">
             <div class="title">
-                <h2>Ce que nos <span class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">clients</span> disent de nous</h2>
+                <h2>Ce que nos <span class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">clients</span> disent de nous</h2>
             </div>
             <div class="scroll-list relative overflow-x-hidden gap-x-[32px] flex items-center justify-between">
+                <dotlottie-wc src="https://lottie.host/8cf09fbc-1262-4ef5-984f-05ea9271e402/td2r9myQJW.lottie"
+                autoplay loop>
+                </dotlottie-wc>
                 <div class="list flex-center gap-8 py-5">
                     <div class="box">
                         <p>« Une vitrine digitale d'exception pour notre cabinet à Casablanca. Le site reflète parfaitement notre professionnalisme et facilite la prise de rendez-vous pour nos patients grâce à une navigation fluide et rassurante. »</p>
@@ -410,6 +410,9 @@
                         </div>
                     </div>
                 </div>
+                <dotlottie-wc src="https://lottie.host/8cf09fbc-1262-4ef5-984f-05ea9271e402/td2r9myQJW.lottie"
+                autoplay loop>
+                </dotlottie-wc>
             </div>
         </div>
     </section>
@@ -474,7 +477,7 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="w-full">
+    <!-- <section id="contact" class="w-full">
         <div class="container w-full">
             <div class="flex max-tb:flex-wrap gap-8">
                 <form action="contact.php" method="POST" class="ticket dark:bg-dark-box bg-white rounded-sm shadow-box-shadow py-15 px-13 sm:px-10 xl:px-13 w-full">
@@ -514,19 +517,10 @@
                         <textarea id="message" name="message" placeholder="Entrez votre message" class="mb-8 h-[150px] resize-none" required></textarea>
                     </div>
                     <input type="submit" value="Envoyer votre demande" class="cursor-pointer duration-200 hover:shadow-dark-hover-box dark:hover:shadow-dark-hover-box !bg-main-color !text-white !w-fit !py-3 !px-9 font-medium hover:contrast-125">
-                </form>
-                 <form action="" class="subscribe flex-center flex-col dark:bg-dark-box bg-white rounded-sm shadow-box-shadow w-full lg:w-5/12 xl:w-4/12 px-11 py-15">
-                    <div class="title pb-12 !mb-11 border-b-1 border-gray-300 dark:border-gray-700">
-                        <h2 class="!text-2xl !mb-4">Subscribe to receive future updates</h2>
-                        <p class="text-base">Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare massa quis lectus.</p>
-                    </div>
-                    <input type="text" id="name" placeholder="Enter your Name">
-                    <input type="text" id="email" placeholder="Enter your Email">
-                    <input type="submit" value="Subscribe" class="cursor-pointer !bg-main-color !text-white !py-3 !px-9 font-medium duration-150 hover:contrast-125">
                 </form> 
             </div>
         </div>
-    </section>
+    </section> -->
     <footer>
         <div class="container">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-10 sm:gap-y-15 py-15 tb:pt-25">
@@ -565,7 +559,7 @@
                     <a href="tel:+33666197344">+33 666 197 344</a>
                 </div>
             </div>
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent"></div>
+            <div class="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent"></div>
             <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
                 <div class="flex">
                     <p>© 2025 LUMIA TECHNOLOGIE. Tous droits réservés.</p>
@@ -576,5 +570,6 @@
     <script src="JS/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
 </body>
 </html>

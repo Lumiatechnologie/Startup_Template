@@ -366,7 +366,11 @@ label{
 
 input,
 #contact .ticket textarea{
-    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1 dark:outline-0 outline-gray-200 border-2 border-transparent focus:border-secondary-color dark:focus:border-main-color
+    @apply bg-[#f8f8f8] dark:bg-[#2C303B] placeholder:text-[#8397aa] rounded-[3px] px-6 py-3 w-full duration-125 outline-1! dark:outline-0! outline-gray-200 border-2 border-transparent focus:border-secondary-color dark:focus:border-main-color
+}
+
+textarea{
+    @apply outline-0
 }
 
 #contact .subscribe input:not(:last-of-type){

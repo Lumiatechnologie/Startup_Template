@@ -9,44 +9,42 @@ let nav_ele = document.querySelectorAll("nav a") // nav links
 let check = document.querySelector(".check") // custom checkbox wrapper
 let check_icon = document.querySelector(".checkbox ion-icon") // check icon
 
-// Initialize theme from localStorage
-if (localStorage.theme == "light") {
-    document.body.classList.remove("dark")
-    pic_theme()
-    theme_btn.classList.remove("fi-rc-moon")
-    theme_btn.classList.add("fi-rs-brightness")
-} else {
-    document.body.classList.add("dark")
-    pic_theme()
-    theme_btn.classList.add("fi-rc-moon")
-    theme_btn.classList.remove("fi-rs-brightness")
-}
+// // Initialize theme from localStorage
+// if (localStorage.theme == "light") {
+//     document.body.classList.remove("dark")
+//     pic_theme()
+//     theme_btn.classList.remove("fi-rc-moon")
+//     theme_btn.classList.add("fi-rs-brightness")
+// } else {
+//     document.body.classList.add("dark")
+//     pic_theme()
+// }
 
-// Update logos based on theme
-function pic_theme() {
-    if (document.body.classList.contains("dark")) {
-        logo.forEach(logo => {
-            logo.src = "images/logo/logo.webp" // light logo
-        })
-    } else {
-        logo.forEach(logo => {
-            logo.src = "images/logo/logo-alt.webp" // dark logo
-        })
-    }
-}
+// // Update logos based on theme
+// function pic_theme() {
+//     if (document.body.classList.contains("dark")) {
+//         logo.forEach(logo => {
+//             logo.src = "images/logo/logo.webp" // light logo
+//         })
+//     } else {
+//         logo.forEach(logo => {
+//             logo.src = "images/logo/logo-alt.webp" // dark logo
+//         })
+//     }
+// }
 
-// Toggle theme on click and save choice
-theme_btn.addEventListener("click", () => {
-    document.body.classList.toggle("dark") // flip theme
-    theme_btn.classList.toggle("fi-rc-moon") // toggle icon class
-    theme_btn.classList.toggle("fi-rs-brightness") // toggle icon class
-    pic_theme() // update logos
-    if (document.body.classList.contains("dark")) {
-        localStorage.theme = "dark" // persist choice
-    } else {
-        localStorage.theme = "light" // persist choice
-    }
-})
+// // Toggle theme on click and save choice
+// theme_btn.addEventListener("click", () => {
+//     document.body.classList.toggle("dark") // flip theme
+//     theme_btn.classList.toggle("fi-rc-moon") // toggle icon class
+//     theme_btn.classList.toggle("fi-rs-brightness") // toggle icon class
+//     pic_theme() // update logos
+//     if (document.body.classList.contains("dark")) {
+//         localStorage.theme = "dark" // persist choice
+//     } else {
+//         localStorage.theme = "light" // persist choice
+//     }
+// })
 
 // Highlight active nav link on click
 nav_ele.forEach(ele => {

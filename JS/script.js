@@ -10,7 +10,6 @@ let up_btn = document.querySelector(".to-up") // scroll to top button
 let about_p2_text = document.querySelectorAll('#about .part-2 .text')
 let fieldsets = document.querySelectorAll('#about fieldset')
 let legends = document.querySelectorAll('#about legend')
-let overlay = document.querySelector(".overlay") // page overlay
 let waves = document.querySelectorAll("#clients dotlottie-wc")
 
 // Initialize theme from localStorage

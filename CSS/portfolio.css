@@ -512,13 +512,14 @@
     background: white;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pm-media img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    scale: 90%;
+    height: 90%;
 }
 
 .pm-details {

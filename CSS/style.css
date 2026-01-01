@@ -54,26 +54,27 @@
     @apply text-main-text mt-5 leading-relaxed pr-[10px]
 }
 
-header nav a {
-    @apply hover:text-violet-indigo duration-100 max-[1200px]:py-3 lg:text-[17px] font-medium
+header .nav a{
+    @apply max-lg:hover:bg-violet-indigo/20 xl:text-[17px] font-medium max-lg:py-3 max-lg:px-6 max-lg:w-full max-lg:rounded-[50px]
 }
 
 header a.active {
-    @apply text-main-color font-semibold duration-100
+    @apply text-main-color font-semibold duration-100 max-lg:bg-main-bg-color
 }
 
-
-header nav .sign a{
-    @apply text-white text-center w-[97px] font-medium rounded-[3px] hover:contrast-125 duration-125
+header .menu-icons ion-icon{
+    @apply text-[27px] text-center
 }
 
 header .theme,
-header ion-icon{
-    @apply cursor-pointer text-[23px] duration-150 hover:text-violet-indigo
+header .burger,
+header nav a{
+    @apply duration-150 hover:text-violet-indigo
 }
 
+
 header .icons ion-icon{
-    @apply hidden tb:inline-block
+    @apply hidden lg:inline-block text-[25px]
 }
 
 section, main {

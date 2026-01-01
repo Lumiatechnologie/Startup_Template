@@ -5,7 +5,7 @@ let side_menu = document.querySelector("nav") // side navigation
 let side_menu_btn = document.querySelector(".burger") // burger button
 let header = document.querySelector("header") // page header
 let header_container = document.querySelector("header div") // header inner container
-let nav_ele = document.querySelectorAll("nav a") // nav links
+let nav_ele = document.querySelectorAll(".nav a") // nav links
 let up_btn = document.querySelector(".to-up") // scroll to top button
 let about_p2_text = document.querySelectorAll('#about .part-2 .text')
 let fieldsets = document.querySelectorAll('#about fieldset')
@@ -77,33 +77,35 @@ nav_ele.forEach(ele => {
 side_menu_btn.addEventListener("click", side_menu_toggle)
 
 function side_menu_toggle(){
-    if (side_menu.classList.contains("max-[1200px]:hidden")) {
-        side_menu.classList.toggle("max-[1200px]:hidden")
-        setTimeout(() => {
-            side_menu.classList.toggle("max-[1200px]:opacity-0")
-            side_menu.classList.toggle("max-[1200px]:opacity-100")
-        }, 150);
-    } else {
-        side_menu.classList.toggle("max-[1200px]:opacity-0")
-        side_menu.classList.toggle("max-[1200px]:opacity-100")
-        setTimeout(() => {
-            side_menu.classList.toggle("max-[1200px]:hidden")
-        }, 150);
-    }
+    // if (side_menu.classList.contains("max-lg:-left-full")) {
+    //     side_menu.classList.remove("max-lg:-left-full")
+    //     side_menu.classList.add("max-lg:left-0")
+    //     setTimeout(() => {
+    //         side_menu.classList.toggle("max-lg:opacity-0")
+    //         side_menu.classList.toggle("max-lg:opacity-100")
+    //     }, 150);
+    // } else {
+    //     side_menu.classList.toggle("max-lg:opacity-0")
+    //     side_menu.classList.toggle("max-lg:opacity-100")
+    //     setTimeout(() => {
+    //         side_menu.classList.remove("max-lg:left-0")
+    //         side_menu.classList.add("max-lg:-left-full")
+    //     }, 150);
+    // }
+    side_menu.classList.toggle("max-lg:-left-full")
+    side_menu.classList.toggle("max-lg:left-0")
 }
 
 // header style on scroll
 function HeaderEffect() {
     if (window.pageYOffset > 10) {
-        header_container.classList.remove("py-6")
-        header_container.classList.add("py-4")
         header.classList.add("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     } else {
-        header_container.classList.add("py-6")
-        header_container.classList.remove("py-4")
         header.classList.remove("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     }
 }
+
+HeaderEffect()
 
 window.addEventListener('scroll', HeaderEffect)
 

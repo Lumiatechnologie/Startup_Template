@@ -61,32 +61,34 @@ nav_ele.forEach(ele => {
 side_menu_btn.addEventListener("click", side_menu_toggle)
 
 function side_menu_toggle() {
-    if (side_menu.classList.contains("max-[1200px]:hidden")) {
-        side_menu.classList.toggle("max-[1200px]:hidden")
-        setTimeout(() => {
-            side_menu.classList.toggle("max-[1200px]:opacity-0")
-            side_menu.classList.toggle("max-[1200px]:opacity-100")
-        }, 150);
+    // if (side_menu.classList.contains("max-lg:-left-full")) {
+    //     side_menu.classList.remove("max-lg:-left-full")
+    //     side_menu.classList.add("max-lg:left-0")
+    //     setTimeout(() => {
+    //         side_menu.classList.toggle("max-lg:opacity-0")
+    //         side_menu.classList.toggle("max-lg:opacity-100")
+    //     }, 150);
+    // } else {
+    //     side_menu.classList.toggle("max-lg:opacity-0")
+    //     side_menu.classList.toggle("max-lg:opacity-100")
+    //     setTimeout(() => {
+    //         side_menu.classList.remove("max-lg:left-0")
+    //         side_menu.classList.add("max-lg:-left-full")
+    //     }, 150);
+    // }
+    side_menu.classList.toggle("max-lg:-left-full")
+    side_menu.classList.toggle("max-lg:left-0")
+}
+
+// header style on scroll
+function HeaderEffect() {
+    if (window.pageYOffset > 10) {
+        header.classList.add("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     } else {
-        side_menu.classList.toggle("max-[1200px]:opacity-0")
-        side_menu.classList.toggle("max-[1200px]:opacity-100")
-        setTimeout(() => {
-            side_menu.classList.toggle("max-[1200px]:hidden")
-        }, 150);
+        header.classList.remove("backdrop-blur-sm", "shadow-md", "dark:bg-header-overlay")
     }
 }
 
-// Header style change on scroll
-function HeaderEffect() {
-    if (window.pageYOffset > 10) {
-        header_container.classList.remove("py-6") // reduce padding
-        header_container.classList.add("py-4") // smaller padding
-        header.classList.add("backdrop-blur-sm", "bg-opacity-20", "shadow-md", "dark:bg-header-overlay") // add styles
-    } else {
-        header_container.classList.add("py-6") // restore padding
-        header_container.classList.remove("py-4") // remove small padding
-        header.classList.remove("backdrop-blur-sm", "bg-opacity-20", "shadow-md", "dark:bg-header-overlay") // remove styles
-    }
-}
+HeaderEffect()
 
 window.addEventListener('scroll', HeaderEffect) // run on scroll

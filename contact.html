@@ -39,16 +39,26 @@
             <a href="index.html" aria-label="Home" class="w-30 sm:w-40 lg:w-43">
                 <img class="logo w-full" src="images/logo/logo.webp" alt="">
             </a>
-            <div id="nav" class="flex items-center tb:justify-between gap-x-9">
-                <nav
-                    class="z-999 flex items-center space-x-12 py-4 duration-150 max-[1200px]:flex-col max-[1200px]:items-start max-[1200px]:absolute max-[1200px]:right-0 max-[1200px]:top-[71px] max-[1200px]:w-[250px] max-[1200px]:px-6 max-[1200px]:rounded max-[1200px]:shadow-md max-[1200px]:dark:bg-dark-page-color max-[1200px]:bg-gray-200 max-[1200px]:hidden max-[1200px]:opacity-0">
-                    <a href="index.html#home">Accueil</a>
-                    <a href="index.html#about">Á propos de nous</a>
-                    <a href="index.html#services">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a class="active" href="contact.html">Contact</a>
-                </nav>
-            </div>
+            <nav class="z-999 py-4 duration-350 max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:absolute max-lg:-left-full max-lg:top-[75px] max-lg:w-[70%] max-lg:h-[calc(100vh-75px)] max-lg:px-6 max-lg:py-10 max-lg:rounded max-lg:shadow-md max-lg:dark:bg-dark-alt-color max-lg:bg-gray-200">
+                    <div class="nav flex items-center space-x-8 xl:space-x-12 max-lg:space-y-5 max-lg:flex-col max-lg:items-start">
+                        <a href="index.html#home">Accueil</a>
+                        <a href="index.html#about">Á propos de nous</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a class="active" href="contact.html">Contact</a>
+                    </div>
+                    <div class="menu-icons flex-center gap-x-6 border-t border-main-text/70 pt-8 lg:hidden">
+                        <a href="https://web.facebook.com/profile.php?id=61570029997839" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/lumiatechnologie?igsh=MWdocnZlZ21raXVleg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </div>
+            </nav>
             <div class="icons flex-center gap-x-2 tb:gap-x-6">
                 <i class="fi fi-rr-menu-burger text-2xl translate-y-1 cursor-pointer burger min-[992px]:hidden"
                     role="button" aria-label="Menu mobile"></i>
@@ -62,16 +72,16 @@
                 </a>
                 <a href="https://www.linkedin.com/company/lumiatechnologie/" target="_blank" rel="noopener noreferrer"
                     aria-label="LinkedIn">
-                    <ion-icon name="logo-linkedin" class=" border-r-1 border-[#ffffffb3] pr-6"></ion-icon>
+                    <ion-icon name="logo-linkedin" class=" border-r border-[#ffffffb3] pr-6"></ion-icon>
                 </a>
-                <i class="theme fi fi-rc-moon max-tb:translate-y-1"></i>
+                <i class="theme fi fi-rc-moon max-tb:translate-y-1 text-[23px]"></i>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <main
-        class="p-0! !pt-24 relative min-h-screen max-[575px]:!pt-[150px] bg-gradient-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        class="p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <section class="container flex-center flex-col pb-12 pt-16 md:pt-20 md:pb-20 xl:pt-24 xl:pb-24 w-full">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
@@ -82,9 +92,9 @@
                     </div>
 
                     <h2
-                        class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold !leading-tight">
+                        class="mb-5 text-black dark:text-white text-3xl sm:text-4xl md:text-6xl font-bold leading-tight!">
                         Contactez notre <span
-                            class="bg-gradient-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe
+                            class="bg-linear-to-r from-blue-500 to-violet-indigo bg-clip-text text-transparent">équipe
                             d'experts</span></h2>
 
                     <p
@@ -428,7 +438,7 @@
                 </div>
             </div>
             <div
-                class="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent">
+                class="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] dark:via-[#959CB183] to-transparent">
             </div>
             <div class="credits flex-center max-tb:flex-col gap-2 w-full py-8 max-[360px]:text-[14px]">
                 <div class="flex">

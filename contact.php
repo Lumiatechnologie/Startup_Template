@@ -1,4 +1,17 @@
 <?php
+// Charger l'autoloader de Composer
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+// Chargement des variables d'environnement si le fichier .env existe
+if (file_exists(__DIR__ . '/.env')) {
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
+
 // Configuration des headers pour JSON
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
@@ -62,11 +75,10 @@ function validateContactData($data) {
     
     // Validation du service
     $allowedServices = ['UX/UI Design', 'Développement Web', 'Applications Mobiles', 'E-commerce', 'Conseil & Stratégie', 'Formation', 'Autre'];
-    $service = isset($data['service']) ? trim($data['service']) : '';
-    if ($service === '') {
+    if (empty($data['service'])) {
         $errors['service'] = "Veuillez sélectionner un service";
-    } elseif (!in_array($service, $allowedServices, true)) {
-    $errors['service'] = "Service invalide";
+    } elseif (!in_array($data['service'], $allowedServices)) {
+        $errors['service'] = "Service invalide";
     }
     
     // Validation du message
@@ -115,53 +127,67 @@ function logContact($data, $success, $message) {
     file_put_contents($logFile, json_encode($logData) . "\n", FILE_APPEND | LOCK_EX);
 }
 
-// Fonction d'envoi d'email améliorée
+// Fonction d'envoi d'email avec PHPMailer
 function sendContactEmail($data) {
-    $to = "contact@lumiatechnologie.com";
-    
-    // Sujet avec encodage UTF-8
-    $subject = "=?UTF-8?B?" . base64_encode("Nouvelle demande de contact – LUMIA TECHNOLOGIE") . "?=";
-    
-    // Corps de l'email amélioré
-    $body = "=== NOUVEAU CONTACT DEPUIS LE SITE WEB ===\n";
-    $body .= "Date: " . date('d/m/Y H:i:s') . "\n";
-    $body .= "IP: " . $data['ip'] . "\n\n";
-    
-    $body .= "INFORMATIONS DU CONTACT:\n";
-    $body .= "Nom: " . $data['name'] . "\n";
-    $body .= "Email: " . $data['email'] . "\n";
-    $body .= "Téléphone: " . ($data['phone'] ?: 'Non renseigné') . "\n";
-    $body .= "Service souhaité: " . $data['service'] . "\n\n";
-    
-    $body .= "MESSAGE:\n";
-    $body .= str_repeat('-', 50) . "\n";
-    $body .= $data['message'] . "\n";
-    $body .= str_repeat('-', 50) . "\n\n";
-    
-    $body .= "=== FIN DU MESSAGE ===\n";
-    
-    // Headers améliorés
-    $headers = [
-        "From: LUMIA TECH Contact <noreply@lumiatechnologie.com>",
-        "Reply-To: " . $data['email'],
-        "X-Mailer: PHP/" . phpversion(),
-        "X-Priority: 2",
-        "MIME-Version: 1.0",
-        "Content-Type: text/plain; charset=UTF-8",
-        "Content-Transfer-Encoding: 8bit"
-    ];
-    
-    // Tentative d'envoi
-    $mailSent = mail($to, $subject, $body, implode("\r\n", $headers));
-    
-    // Log de la tentative
-    if ($mailSent) {
-        error_log("Email envoyé avec succès pour " . $data['email']);
-    } else {
-        error_log("Échec d'envoi d'email pour " . $data['email']);
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuration du serveur
+        // $mail->SMTPDebug = 2; // Activer le debug pour voir les erreurs
+        $mail->isSMTP();
+        $mail->Host       = $_ENV['SMTP_HOST'] ?? 'smtp.hostinger.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $_ENV['SMTP_USERNAME'] ?? 'contact@lumiatechnologie.com'; // À configurer
+        $mail->Password   = $_ENV['SMTP_PASSWORD'] ?? 'VotreMotDePasse'; // À configurer
+        $mail->SMTPSecure = $_ENV['SMTP_SECURE'] ?? PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = $_ENV['SMTP_PORT'] ?? 465;
+        $mail->CharSet    = 'UTF-8';
+
+        // Destinataires
+        $mail->setFrom($mail->Username, 'LUMIA TECH Contact'); // L'expéditeur doit être l'adresse authentifiée
+        $mail->addAddress($_ENV['CONTACT_EMAIL'] ?? 'contact@lumiatechnologie.com');     // Ajouter le destinataire
+        $mail->addReplyTo($data['email'], $data['name']);
+
+        // Contenu
+        $mail->isHTML(true);
+        $mail->Subject = "Nouvelle demande de contact – " . $data['name'];
+        
+        // Template HTML de l'email
+        $mailBody = "
+        <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px;'>
+            <h2 style='color: #274ce3; border-bottom: 2px solid #274ce3; padding-bottom: 10px;'>Nouvelle Demande de Contact</h2>
+            
+            <p><strong>Date :</strong> " . date('d/m/Y H:i') . "</p>
+            
+            <div style='background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 20px;'>
+                <h3 style='margin-top: 0; color: #333;'>Informations Client</h3>
+                <p><strong>Nom :</strong> {$data['name']}</p>
+                <p><strong>Email :</strong> <a href='mailto:{$data['email']}'>{$data['email']}</a></p>
+                <p><strong>Téléphone :</strong> " . ($data['phone'] ?: 'Non renseigné') . "</p>
+                <p><strong>Service :</strong> {$data['service']}</p>
+            </div>
+            
+            <div style='background-color: #fff; padding: 15px; border: 1px solid #eee; border-radius: 5px;'>
+                <h3 style='margin-top: 0; color: #333;'>Message</h3>
+                <p style='white-space: pre-wrap;'>{$data['message']}</p>
+            </div>
+            
+            <div style='margin-top: 20px; font-size: 12px; color: #888; border-top: 1px solid #eee; padding-top: 10px;'>
+                <p>Envoyé depuis le formulaire de contact du site Lumiatechnologie.</p>
+                <p>IP: {$data['ip']}</p>
+            </div>
+        </div>
+        ";
+        
+        $mail->Body    = $mailBody;
+        $mail->AltBody = strip_tags(str_replace(['<br>', '</p>'], ["\n", "\n\n"], $mailBody));
+
+        $mail->send();
+        return true;
+    } catch (Exception $e) {
+        error_log("Erreur PHPMailer: {$mail->ErrorInfo}");
+        return false;
     }
-    
-    return $mailSent;
 }
 
 // Traitement principal

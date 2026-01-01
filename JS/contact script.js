@@ -94,97 +94,97 @@ function HeaderEffect() {
 window.addEventListener('scroll', HeaderEffect) // run on scroll
 
 document.addEventListener('DOMContentLoaded', function () {
-const form = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-const btnText = document.getElementById('btnText');
-const btnLoading = document.getElementById('btnLoading');
-const formStatus = document.getElementById('formStatus');
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoading = document.getElementById('btnLoading');
+    const formStatus = document.getElementById('formStatus');
 
 // Validation en temps réel
 const fields = {
-name: {
-    element: document.getElementById('name'),
-    error: document.getElementById('name-error'),
-    validator: (value) => {
-        if (!value.trim()) return "Le nom est obligatoire";
-        if (value.trim().length < 2) return "Le nom doit contenir au moins 2 caractères";
-        if (value.length > 255) return "Le nom ne peut pas dépasser 255 caractères";
-        if (!/^[a-zA-ZÀ-ÿ\s\-']+$/u.test(value)) return "Le nom contient des caractères invalides";
-        return null;
+    name: {
+        element: document.getElementById('name'),
+        error: document.getElementById('name-error'),
+        validator: (value) => {
+            if (!value.trim()) return "Le nom est obligatoire";
+            if (value.trim().length < 2) return "Le nom doit contenir au moins 2 caractères";
+            if (value.length > 255) return "Le nom ne peut pas dépasser 255 caractères";
+            if (!/^[a-zA-ZÀ-ÿ\s\-']+$/u.test(value)) return "Le nom contient des caractères invalides";
+            return null;
+        }
+    },
+    email: {
+        element: document.getElementById('email'),
+        error: document.getElementById('email-error'),
+        validator: (value) => {
+            if (!value.trim()) return "L'email est obligatoire";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "Format d'email invalide";
+            if (value.length > 255) return "L'email ne peut pas dépasser 255 caractères";
+            return null;
+        }
+    },
+    phone: {
+        element: document.getElementById('phone'),
+        error: document.getElementById('phone-error'),
+        validator: (value) => {
+            if (value && !/^[+]?[\d\s\-()]{8,20}$/.test(value)) return "Format de téléphone invalide";
+            return null;
+        }
+    },
+    service: {
+        element: document.getElementById('service'),
+        error: document.getElementById('service-error'),
+        validator: (value) => {
+            if (!value) return "Veuillez sélectionner un service";
+            return null;
+        }
+    },
+    message: {
+        element: document.getElementById('message'),
+        error: document.getElementById('message-error'),
+        validator: (value) => {
+            if (!value.trim()) return "Le message est obligatoire";
+            if (value.trim().length < 10) return "Le message doit contenir au moins 10 caractères";
+            if (value.length > 2000) return "Le message ne peut pas dépasser 2000 caractères";
+            return null;
+        }
     }
-},
-email: {
-    element: document.getElementById('email'),
-    error: document.getElementById('email-error'),
-    validator: (value) => {
-        if (!value.trim()) return "L'email est obligatoire";
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "Format d'email invalide";
-        if (value.length > 255) return "L'email ne peut pas dépasser 255 caractères";
-        return null;
-    }
-},
-phone: {
-    element: document.getElementById('phone'),
-    error: document.getElementById('phone-error'),
-    validator: (value) => {
-        if (value && !/^[+]?[\d\s\-()]{8,20}$/.test(value)) return "Format de téléphone invalide";
-        return null;
-    }
-},
-service: {
-    element: document.getElementById('service'),
-    error: document.getElementById('service-error'),
-    validator: (value) => {
-        if (!value) return "Veuillez sélectionner un service";
-        return null;
-    }
-},
-message: {
-    element: document.getElementById('message'),
-    error: document.getElementById('message-error'),
-    validator: (value) => {
-        if (!value.trim()) return "Le message est obligatoire";
-        if (value.trim().length < 10) return "Le message doit contenir au moins 10 caractères";
-        if (value.length > 2000) return "Le message ne peut pas dépasser 2000 caractères";
-        return null;
-    }
-}
 };
 
 // Fonction de validation d'un champ
 function validateField(fieldName) {
-const field = fields[fieldName];
-const value = field.element.value;
-const error = field.validator(value);
+    const field = fields[fieldName];
+    const value = field.element.value;
+    const error = field.validator(value);
 
-if (error) {
-    field.error.textContent = error;
-    field.error.classList.remove('hidden');
-    field.element.classList.add('border-red-500');
-    field.element.classList.remove('border-gray-200', 'dark:border-gray-600');
-    return false;
-} else {
-    field.error.textContent = '';
-    field.error.classList.add('hidden');
-    field.element.classList.remove('border-red-500');
-    field.element.classList.add('border-gray-200', 'dark:border-gray-600');
-    return true;
-}
+    if (error) {
+        field.error.textContent = error;
+        field.error.classList.remove('hidden');
+        field.element.classList.add('border-red-500');
+        field.element.classList.remove('border-gray-200', 'dark:border-gray-600');
+        return false;
+    } else {
+        field.error.textContent = '';
+        field.error.classList.add('hidden');
+        field.element.classList.remove('border-red-500');
+        field.element.classList.add('border-gray-200', 'dark:border-gray-600');
+        return true;
+    }
 }
 
 // Validation en temps réel
 Object.keys(fields).forEach(fieldName => {
-const field = fields[fieldName];
-field.element.addEventListener('blur', () => validateField(fieldName));
-field.element.addEventListener('input', () => {
-    if (fieldName === 'message') {
-        document.getElementById('message-count').textContent = field.element.value.length;
-    }
-    // Validation immédiate pour les champs simples
-    if (fieldName === 'name' || fieldName === 'email' || fieldName === 'phone') {
-        validateField(fieldName);
-    }
-});
+    const field = fields[fieldName];
+    field.element.addEventListener('blur', () => validateField(fieldName));
+    field.element.addEventListener('input', () => {
+        if (fieldName === 'message') {
+            document.getElementById('message-count').textContent = field.element.value.length;
+        }
+        // Validation immédiate pour les champs simples
+        if (fieldName === 'name' || fieldName === 'email' || fieldName === 'phone') {
+            validateField(fieldName);
+        }
+    });
 });
 
 // Gestion des messages de statut
@@ -241,7 +241,7 @@ const formData = {
     name: fields.name.element.value.trim(),
     email: fields.email.element.value.trim(),
     phone: fields.phone.element.value.trim(),
-    service: fields.service.value.trim(),
+    service: fields.service.element.value,
     message: fields.message.element.value.trim()
 };
 

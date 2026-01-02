@@ -63,7 +63,7 @@ header a.active {
 }
 
 header .menu-icons ion-icon{
-    @apply text-[27px] text-center
+    @apply text-[23px] text-center
 }
 
 header .theme,
@@ -455,7 +455,7 @@ footer .links{
 
 @media (min-width: 992px) {
     .container {
-        max-width: 992px;
+        max-width: 1100px;
     }
 }
 

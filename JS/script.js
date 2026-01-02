@@ -77,21 +77,6 @@ nav_ele.forEach(ele => {
 side_menu_btn.addEventListener("click", side_menu_toggle)
 
 function side_menu_toggle(){
-    // if (side_menu.classList.contains("max-lg:-left-full")) {
-    //     side_menu.classList.remove("max-lg:-left-full")
-    //     side_menu.classList.add("max-lg:left-0")
-    //     setTimeout(() => {
-    //         side_menu.classList.toggle("max-lg:opacity-0")
-    //         side_menu.classList.toggle("max-lg:opacity-100")
-    //     }, 150);
-    // } else {
-    //     side_menu.classList.toggle("max-lg:opacity-0")
-    //     side_menu.classList.toggle("max-lg:opacity-100")
-    //     setTimeout(() => {
-    //         side_menu.classList.remove("max-lg:left-0")
-    //         side_menu.classList.add("max-lg:-left-full")
-    //     }, 150);
-    // }
     side_menu.classList.toggle("max-lg:-left-full")
     side_menu.classList.toggle("max-lg:left-0")
 }

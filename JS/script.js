@@ -42,7 +42,7 @@ function pic_theme() {
             logo.src = "images/logo/logo-alt.webp"
         })
         waves.forEach(wave => {
-            wave.setAttribute("src", "https://lottie.host/9b0c232b-0ac6-450c-99d4-eb6f52540074/BVKA5TUFwq.lottie")
+            wave.setAttribute("src", "https://lottie.host/e4ebf9de-f171-471f-9a79-3cd3e36868ff/LbE8l8xuRG.lottie")
         })
     }
 }

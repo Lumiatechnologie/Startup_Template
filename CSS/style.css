@@ -77,7 +77,7 @@ header .icons ion-icon{
     @apply hidden lg:inline-block text-[25px]
 }
 
-section, main {
+section {
     @apply py-16 md:py-20 tb:py-28 duration-125
 }
 

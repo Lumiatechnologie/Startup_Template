@@ -5,6 +5,8 @@ let side_menu = document.querySelector("nav") // side nav
 let side_menu_btn = document.querySelector(".burger") // burger button
 let header = document.querySelector("header") // page header
 let header_container = document.querySelector("header div") // header inner container
+let main = document.querySelector("main")
+let footer = document.querySelector("footer")
 let nav_ele = document.querySelectorAll("nav a") // nav links
 let up_btn = document.querySelector(".to-up") // scroll to top button
 
@@ -69,6 +71,8 @@ side_menu_btn.addEventListener("click", side_menu_toggle)
 function side_menu_toggle() {
     side_menu.classList.toggle("max-lg:-left-full")
     side_menu.classList.toggle("max-lg:left-0")
+    main.classList.toggle("blur-md")
+    footer.classList.toggle("blur-md")
 }
 
 // header style on scroll

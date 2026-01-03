@@ -5,7 +5,6 @@ let side_menu_btn = document.querySelector(".burger") // burger button
 let header = document.querySelector("header") // page header
 let sections = document.querySelectorAll("section")
 let footer = document.querySelector("footer")
-let header_container = document.querySelector("header div") // header inner container
 let nav_ele = document.querySelectorAll("nav a") // nav links
 let up_btn = document.querySelector(".to-up") // scroll to top button
 
@@ -22,7 +21,10 @@ nav_ele.forEach(ele => {
             a.classList.remove("active")
         })
         ele.classList.add("active")
-        side_menu_toggle()
+        // Only toggle menu if it's open (mobile view)
+        if (side_menu.classList.contains("max-lg:left-0")) {
+            side_menu_toggle()
+        }
     })
 })
 

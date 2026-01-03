@@ -4,7 +4,6 @@ let logo = document.querySelectorAll(".logo") // logo images
 let side_menu = document.querySelector("nav") // side nav
 let side_menu_btn = document.querySelector(".burger") // burger button
 let header = document.querySelector("header") // page header
-let header_container = document.querySelector("header div") // header inner container
 let main = document.querySelector("main")
 let footer = document.querySelector("footer")
 let nav_ele = document.querySelectorAll("nav a") // nav links
@@ -61,7 +60,10 @@ nav_ele.forEach(ele => {
             a.classList.remove("active")
         })
         ele.classList.add("active")
-        side_menu_toggle()
+        // Only toggle menu if it's open (mobile view)
+        if (side_menu.classList.contains("max-lg:left-0")) {
+            side_menu_toggle()
+        }
     })
 })
 

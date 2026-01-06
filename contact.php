@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
     exit();
 }
 
-function jsonResponse($success, $message, $data = null) {
+function jsonResponse($success, $message, $data = null)
+{
     $response = [
         'success' => $success,
         'message' => $message,
@@ -43,9 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 // Fonction de validation robuste
-function validateContactData($data) {
+function validateContactData($data)
+{
     $errors = [];
-    
+
     // Validation du nom
     if (empty($data['name'])) {
         $errors['name'] = "Le nom est obligatoire";
@@ -56,7 +58,7 @@ function validateContactData($data) {
     } elseif (!preg_match("/^[a-zA-ZÀ-ÿ\s\-']+$/u", $data['name'])) {
         $errors['name'] = "Le nom contient des caractères invalides";
     }
-    
+
     // Validation de l'email
     if (empty($data['email'])) {
         $errors['email'] = "L'email est obligatoire";
@@ -65,14 +67,14 @@ function validateContactData($data) {
     } elseif (strlen($data['email']) > 255) {
         $errors['email'] = "L'email ne peut pas dépasser 255 caractères";
     }
-    
+
     // Validation du téléphone (optionnel)
     if (!empty($data['phone'])) {
         if (!preg_match("/^[+]?[\d\s\-()]{8,20}$/", $data['phone'])) {
             $errors['phone'] = "Format de téléphone invalide";
         }
     }
-    
+
     // Validation du service
     $allowedServices = ['UX/UI Design', 'Développement Web', 'Applications Mobiles', 'E-commerce', 'Conseil & Stratégie', 'Formation', 'Autre'];
     if (empty($data['service'])) {
@@ -80,7 +82,7 @@ function validateContactData($data) {
     } elseif (!in_array($data['service'], $allowedServices)) {
         $errors['service'] = "Service invalide";
     }
-    
+
     // Validation du message
     if (empty($data['message'])) {
         $errors['message'] = "Le message est obligatoire";
@@ -89,12 +91,13 @@ function validateContactData($data) {
     } elseif (strlen($data['message']) > 2000) {
         $errors['message'] = "Le message ne peut pas dépasser 2000 caractères";
     }
-    
+
     return $errors;
 }
 
 // Fonction de sanitisation
-function sanitizeContactData($data) {
+function sanitizeContactData($data)
+{
     return [
         'name' => htmlspecialchars(trim($data['name']), ENT_QUOTES, 'UTF-8'),
         'email' => filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL),
@@ -107,7 +110,8 @@ function sanitizeContactData($data) {
 }
 
 // Fonction de log simple
-function logContact($data, $success, $message) {
+function logContact($data, $success, $message)
+{
     $logData = [
         'timestamp' => date('c'),
         'ip' => $data['ip'],
@@ -115,33 +119,34 @@ function logContact($data, $success, $message) {
         'success' => $success,
         'message' => $message
     ];
-    
+
     $logFile = 'logs/contacts_' . date('Y-m-d') . '.log';
     $logDir = dirname($logFile);
-    
+
     // Créer le dossier logs s'il n'existe pas
     if (!is_dir($logDir)) {
         mkdir($logDir, 0755, true);
     }
-    
+
     file_put_contents($logFile, json_encode($logData) . "\n", FILE_APPEND | LOCK_EX);
 }
 
 // Fonction d'envoi d'email avec PHPMailer
-function sendContactEmail($data) {
+function sendContactEmail($data)
+{
     $mail = new PHPMailer(true);
 
     try {
         // Configuration du serveur
         // $mail->SMTPDebug = 2; // Activer le debug pour voir les erreurs
         $mail->isSMTP();
-        $mail->Host       = $_ENV['SMTP_HOST'] ?? 'smtp.hostinger.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = $_ENV['SMTP_USERNAME'] ?? 'contact@lumiatechnologie.com'; // À configurer
-        $mail->Password   = $_ENV['SMTP_PASSWORD'] ?? 'VotreMotDePasse'; // À configurer
+        $mail->Host = $_ENV['SMTP_HOST'] ?? 'smtp.hostinger.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['SMTP_USERNAME'] ?? 'contact@lumiatechnologie.com'; // À configurer
+        $mail->Password = $_ENV['SMTP_PASSWORD'] ?? 'VotreMotDePasse'; // À configurer
         $mail->SMTPSecure = $_ENV['SMTP_SECURE'] ?? PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = $_ENV['SMTP_PORT'] ?? 465;
-        $mail->CharSet    = 'UTF-8';
+        $mail->Port = $_ENV['SMTP_PORT'] ?? 465;
+        $mail->CharSet = 'UTF-8';
 
         // Destinataires
         $mail->setFrom($mail->Username, 'LUMIA TECH Contact'); // L'expéditeur doit être l'adresse authentifiée
@@ -151,7 +156,7 @@ function sendContactEmail($data) {
         // Contenu
         $mail->isHTML(true);
         $mail->Subject = "Nouvelle demande de contact – " . $data['name'];
-        
+
         // Template HTML de l'email
         $mailBody = "
         <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px;'>
@@ -178,8 +183,8 @@ function sendContactEmail($data) {
             </div>
         </div>
         ";
-        
-        $mail->Body    = $mailBody;
+
+        $mail->Body = $mailBody;
         $mail->AltBody = strip_tags(str_replace(['<br>', '</p>'], ["\n", "\n\n"], $mailBody));
 
         $mail->send();
@@ -194,45 +199,45 @@ function sendContactEmail($data) {
 try {
     // Récupération et validation des données
     $rawData = json_decode(file_get_contents('php://input'), true);
-    
+
     // Si pas de JSON, essayer les données POST classiques
     if (!$rawData) {
         $rawData = $_POST;
     }
-    
+
     // Vérification des données requises
     if (empty($rawData)) {
         jsonResponse(false, "Aucune donnée reçue");
     }
-    
+
     // Validation des données
     $errors = validateContactData($rawData);
     if (!empty($errors)) {
         jsonResponse(false, "Données invalides", ['errors' => $errors]);
     }
-    
+
     // Sanitisation des données
     $cleanData = sanitizeContactData($rawData);
-    
+
     // Envoi de l'email
     $emailSent = sendContactEmail($cleanData);
-    
+
     if ($emailSent) {
         // Log du succès
         logContact($cleanData, true, "Message envoyé avec succès");
-        
+
         jsonResponse(true, "✅ Votre message a été envoyé avec succès ! Nous vous recontacterons dans les plus brefs délais.");
     } else {
         // Log de l'échec
         logContact($cleanData, false, "Échec d'envoi de l'email");
-        
+
         jsonResponse(false, "❌ Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement par email.");
     }
-    
+
 } catch (Exception $e) {
     // Log de l'erreur
     error_log("Erreur contact: " . $e->getMessage());
-    
+
     jsonResponse(false, "❌ Une erreur technique s'est produite. Veuillez réessayer plus tard.");
 }
 ?>

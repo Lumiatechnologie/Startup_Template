@@ -260,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 form.reset();
                 // Réinitialiser les compteurs et styles
                 document.getElementById('message-count').textContent = '0';
+
                 Object.keys(fields).forEach(fieldName => {
                     fields[fieldName].error.classList.add('hidden');
                     fields[fieldName].element.classList.remove('border-red-500');
@@ -294,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
             btnLoading.classList.add('hidden');
         }
     });
+
 
     // Initialisation du compteur de caractères
     document.getElementById('message-count').textContent = '0';

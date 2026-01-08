@@ -1,0 +1,90 @@
+/* --- PREMIUM UI STYLES --- */
+
+/* 1. LENIS SMOOTH SCROLL */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* 2. CINEMATIC NOISE OVERLAY */
+/* 2. CINEMATIC NOISE OVERLAY REMOVED */
+
+/* 3. CUSTOM CURSOR */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+        /* Hide default cursor */
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #2563eb;
+        /* Main color */
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(37, 99, 235, 0.5);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
+
+    /* Dark mode adjustments if needed */
+    body.dark .cursor-dot {
+        background-color: #60a5fa;
+    }
+
+    body.dark .cursor-outline {
+        border-color: rgba(96, 165, 250, 0.5);
+    }
+
+    /* Hover State */
+    body.hovering .cursor-outline {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(37, 99, 235, 0.1);
+        border-color: transparent;
+    }
+}
+
+/* 4. PAGE TRANSITION REMOVED */
+
+/* 5. TEXT REVEALS (SplitType 3D) */
+.split-line {
+    overflow: hidden;
+    perspective: 400px;
+    /* Essential for 3D roll */
+}
+
+.split-line .line {
+    transform-origin: bottom;
+    will-change: transform, opacity;
+}

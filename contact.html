@@ -24,6 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/premium.css">
     <title>LUMIATECH</title>
 </head>
 
@@ -164,7 +165,7 @@
 
                                         </label>
                                         <input type="tel" id="phone" name="phone"
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="w-full mt-[20px] px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="+33 666 197 344">
                                         <div id="phone-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -174,7 +175,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <select id="service" name="service" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
+                                            class="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
                                             <option value="">Sélectionnez un service</option>
                                             <option value="UX/UI Design">UX/UI Design</option>
                                             <option value="Développement Web">Développement Web</option>
@@ -201,9 +202,8 @@
                                 </div>
 
 
-                                <button type="submit" id="submitBtn"
-                                    class="w-full bg-main-color hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none disabled:shadow-none">
-                                    <span id="btnText">
+                                <button type="submit" id="submitBtn" class="w-full bg-main-color hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:transform-none disabled:shadow-none">
+                                    <span id="btnText" class="flex-center">
                                         <ion-icon name="send-outline" class="mr-3 text-lg"></ion-icon>
                                         Envoyer ma demande
                                     </span>
@@ -226,8 +226,14 @@
                             </h3>
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="bg-main-bg-color p-3 rounded-xl">
-                                        <ion-icon name="mail-outline" class="text-main-color text-xl"></ion-icon>
+                                    <div class="bg-main-bg-color w-12 h-12 flex-center rounded-xl">
+                                        <animated-icons
+                                            src="https://animatedicons.co/get-icon?name=mail&style=minimalistic&token=e55f9897-402e-4453-b539-03e933b6d7fa"
+                                            trigger="loop"
+                                            attributes='{"variationThumbColour":"#536DFE","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":2.3199999999999998,"defaultColours":{"group-1":"#274CE3FF","group-2":"#274CE3FF","background":"#FFFFFF00"}}'
+                                            height="40"
+                                            width="40">
+                                        </animated-icons>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
@@ -241,8 +247,15 @@
                                 </div>
 
                                 <div class="flex items-start space-x-4">
-                                    <div class="bg-main-bg-color bg-opacity-20 p-3 rounded-xl">
-                                        <ion-icon name="call-outline" class="text-main-color text-xl"></ion-icon>
+                                    <div class="bg-main-bg-color bg-opacity-20 w-12 h-12 flex-center rounded-xl">
+                                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/wtywrnoz.json"
+                                            trigger="loop"
+                                            delay="400"
+                                            colors="primary:#274ce3"
+                                            style="width:30px;height:30px">
+                                        </lord-icon>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Téléphone</h4>
@@ -255,12 +268,25 @@
                                 </div>
 
                                 <div class="flex items-start space-x-4">
-                                    <div class="bg-main-bg-color p-3 rounded-xl">
-                                        <ion-icon name="location-outline" class="text-main-color text-xl"></ion-icon>
+                                    <div class="bg-main-bg-color w-12 h-12 flex-center rounded-xl">
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/onmwuuox.json"
+                                            trigger="loop"
+                                            delay="500"
+                                            stroke="bold"
+                                            colors="primary:#274ce3,secondary:#274ce3"
+                                            style="width:30px;height:30px">
+                                        </lord-icon>
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Localisation</h4>
-                                        <p class="text-gray-600 dark:text-gray-300">France - Saint-Étienne</p>
+                                        <a 
+                                            href="https://maps.app.goo.gl/TZRLUsqYD6JWbrCa6"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="duration-150 hover:text-violet-indigo flex items-center gap-x-1">
+                                            France - Saint-Étienne
+                                            <ion-icon name="link-outline" class="text-main-color"></ion-icon>
+                                        </a>
                                         <p class="text-gray-600 dark:text-gray-300">Maroc - Casablanca</p>
                                         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Développement à
                                             distance et sur site</p>
@@ -308,9 +334,14 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-12">
-                        <div
-                            class="inline-flex items-center px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-4">
-                            <ion-icon name="help-circle-outline" class="mr-2"></ion-icon>
+                        <div class="inline-flex items-center gap-x-2 px-4 py-2 bg-main-bg-color text-main-color rounded-full text-sm font-medium mb-4">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/biqqsrac.json"
+                                trigger="loop"
+                                delay="700"
+                                colors="primary:#274ce3"
+                                style="width:20px;height:20px">
+                            </lord-icon>
                             Questions fréquentes
                         </div>
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -324,8 +355,15 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="time-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-3">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/okqjaags.json"
+                                    trigger="loop"
+                                    delay="700"
+                                    colors="primary:#274ce3"
+                                    style="width:20px;height:20px"
+                                    class="-translate-y-px">
+                                </lord-icon>
                                 Combien de temps prend un projet ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -336,8 +374,15 @@
 
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="shield-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-3">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/asyunleq.json"
+                                    trigger="loop"
+                                    delay="700"
+                                    colors="primary:#274ce3"
+                                    style="width:20px;height:20px"
+                                    class="-translate-y-px">
+                                </lord-icon>
                                 Proposez-vous de la maintenance ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -348,8 +393,15 @@
 
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="bulb-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-2">
+                                <animated-icons
+                                    src="https://animatedicons.co/get-icon?name=lightbulb&style=minimalistic&token=06bcc1a8-eb2e-4ff3-9dfb-e3bcb5267e38"
+                                    trigger="loop"
+                                    attributes='{"variationThumbColour":"#536DFE","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":2.3200000000000003,"defaultColours":{"group-1":"#274CE3FF","group-2":"#274CE3FF","background":"#FFFFFF00"}}'
+                                    height="27"
+                                    width="27"
+                                    class="-translate-y-[3px]">>
+                                </animated-icons>
                                 Travaillez-vous avec des startups ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -360,8 +412,15 @@
 
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="card-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-3">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/vmztfafm.json"
+                                    trigger="loop"
+                                    delay="700"
+                                    colors="primary:#274ce3"
+                                    style="width:20px;height:20px"
+                                    class="-translate-y-px">
+                                </lord-icon>
                                 Quels sont vos tarifs ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -372,8 +431,15 @@
 
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="globe-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-3">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/rpviwvwn.json"
+                                    trigger="loop"
+                                    delay="700"
+                                    colors="primary:#274ce3,secondary:#274ce3"
+                                    style="width:22px;height:22px"
+                                    class="-translate-y-px">
+                                </lord-icon>
                                 Travaillez-vous à distance ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -384,8 +450,15 @@
 
                         <div
                             class="bg-white dark:bg-dark-box rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <ion-icon name="trending-up-outline" class="text-main-color mr-3"></ion-icon>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-x-3">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/zfemvkpr.json"
+                                    trigger="loop"
+                                    delay="700"
+                                    colors="primary:#274ce3"
+                                    style="width:20px;height:20px"
+                                    class="-translate-y-px">
+                                </lord-icon>
                                 Quelles technologies utilisez-vous ?
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -459,12 +532,17 @@
     </footer>
 
     <script src="JS/contact script.js"></script>
+    <script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- GSAP Animations -->
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="JS/premium-ui.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
 

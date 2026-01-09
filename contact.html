@@ -29,7 +29,7 @@
 </head>
 
 <body
-    class="overflow-x-hidden relative dark:bg-dark-page-color bg-page-color text-black dark:text-[#ffffffb3] dark duration-150">
+    class="relative dark:bg-dark-page-color bg-page-color text-black dark:text-[#ffffffb3] dark duration-150">
     <div class="overlay close-video absolute w-full h-full top-0 left-0 bg-overlay z-998 duration-120 opacity-0 hidden">
     </div>
     <div
@@ -90,7 +90,7 @@
 
     <!-- Hero Section -->
     <main
-        class="overflow-hidden p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        class="p-0! pt-24! relative min-h-screen max-[575px]:pt-[150px]! bg-linear-to-br from-blue-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <section id="contact-hero" class="flex-center flex-col pb-12 pt-16 md:pt-20 md:pb-20 xl:pt-24 xl:pb-24 w-full">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
@@ -115,7 +115,7 @@
 
         <!-- Main Contact Section -->
         <section id="contact-section" class="pb-16 lg:pb-24">
-            <div class="container mx-auto px-4">
+            <div class="overflow-hidden container mx-auto px-4">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-7xl mx-auto">
                     <!-- Contact Form -->
                     <div class="lg:col-span-3">
@@ -142,7 +142,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <input type="text" id="name" name="name" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="Votre nom complet" aria-describedby="name-error">
                                         <div id="name-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -152,7 +152,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <input type="email" id="email" name="email" required
-                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="votre@email.com" aria-describedby="email-error">
                                         <div id="email-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -165,7 +165,7 @@
 
                                         </label>
                                         <input type="tel" id="phone" name="phone"
-                                            class="w-full mt-[20px] px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
+                                            class="w-full mt-[20px] px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200 placeholder-gray-400"
                                             placeholder="+33 666 197 344">
                                         <div id="phone-error" class="hidden text-red-500 text-sm mt-1"></div>
                                     </div>
@@ -175,7 +175,7 @@
                                             <span class="text-red-500">*</span>
                                         </label>
                                         <select id="service" name="service" required
-                                            class="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
+                                            class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white transition-all duration-200">
                                             <option value="">Sélectionnez un service</option>
                                             <option value="UX/UI Design">UX/UI Design</option>
                                             <option value="Développement Web">Développement Web</option>
@@ -191,7 +191,7 @@
 
                                 <div class="space-y-2">
                                     <textarea id="message" name="message" rows="5" required
-                                        class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
+                                        class="w-full px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-main-color focus:border-main-color dark:bg-gray-700 dark:text-white resize-none transition-all duration-200 placeholder-gray-400"
                                         placeholder="Décrivez votre projet, vos objectifs, vos attentes et tout élément important à prendre en compte..."></textarea>
                                     <div class="flex justify-between items-center">
                                         <div id="message-error" class="hidden text-red-500 text-sm mt-1"></div>
@@ -217,7 +217,7 @@
                     </div>
 
                     <!-- Contact Information Sidebar -->
-                    <div class="lg:col-span-2 space-y-6">
+                    <div class="lg:col-span-2 space-y-8 lg:space-y-14.5">
                         <!-- Contact Details -->
                         <div
                             class="bg-white dark:bg-dark-box rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 p-8">
